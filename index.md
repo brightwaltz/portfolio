@@ -4,7 +4,7 @@ description: Personal Data & AI, Graph-Document, Learning Support, Multimodal Se
 layout: default
 ---
 
-# Kenichi Shibata
+# 柴田 健一 / Kenichi Shibata
 玉川大学 工学部 ソフトウェアサイエンス学科 講師 / 理化学研究所 AIP 分散型ビッグデータチーム 客員研究員
 
 ---
