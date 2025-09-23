@@ -24,7 +24,7 @@ layout: default
 - 高齢社会の課題にデータ×UXで取り組み、**小さな実証の積み上げ**を重視。  
 
 ---
-<div style="background:#f0f0f0; padding:0.5em; border-radius:8px;">
+
 <h2 style="color:#2c3e50; background:#f0f0f0; padding:0.5em; border-radius:8px;">
 # AI研究開発/AI Research & Development
 </h2>
@@ -82,8 +82,6 @@ layout: default
   - 臨床現場での入力効率とデータの標準化に配慮したシステムデザイン。  
 
 ---
-
-</div>
 
 ## Research Themes
 
