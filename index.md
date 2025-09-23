@@ -50,14 +50,14 @@ layout: default
 
 ## Selected Outputs
 
-- **AI学会誌 2025 **  
-  *小規模言語モデルによるパーソナル AIの展望 *  
-- **大学授業における生成AIの活用設計（査読有）2024 **  
-  文章生成AIを用いた授業デザインの提案・実践（玉川大学工学部紀要, 2024）。  
+- **AI学会誌 2025**  
+  小規模言語モデルによるパーソナル AIの展望 (人工知能)
+- **大学授業における生成AIの活用設計（査読有）2024**  
+  文章生成AIを用いた授業デザインの提案・実践（玉川大学工学部紀要, 2024） 
 - **NCSP 2023**  
-  *Collaborative Learning Support Environment Utilizing Graph Documents*（口頭発表）／同会期セッション座長。
+  *Collaborative Learning Support Environment Utilizing Graph Documents*（口頭発表）／同会期セッション座長
 
-※ 詳細は下の「Links & Records」へ。
+※ 詳細は下の「Links & Records」のresearchmapへ。
 
 ---
 
