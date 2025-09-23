@@ -68,9 +68,9 @@ layout: default
 ---
 
 ## Links & Records
-- [researchmap（研究者情報）](https://researchmap.jp/brightwaltz)
-- [Strikingly（個人サイト）](https://brightwaltz.mystrikingly.com)
-- [Wantedly（プロフィール）](https://www.wantedly.com/id/brightwaltz)
+- [researchmap（研究者情報）](https://researchmap.jp/brightwaltz){:target="_blank"}
+- [Strikingly（個人サイト）](https://brightwaltz.mystrikingly.com){:target="_blank"}
+- [Wantedly（プロフィール）](https://www.wantedly.com/id/brightwaltz){:target="_blank"}
 
 ---
 
