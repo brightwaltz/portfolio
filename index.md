@@ -130,7 +130,7 @@ layout: default
 
 ### 主な活動領域
 
-**メディアアート・大型プロジェクトへの楽曲提供**
+**メディアアート・プロジェクトへの楽曲提供**
 落合陽一氏の映像作品（筑波大学デジタルネイチャー研究室・個展「<a href="https://www.youtube.com/watch?v=98VGJzv7xlc" target="_blank">未知への追憶</a>」・<a href="https://www.youtube.com/watch?v=hE2CStcAO8o" target="_blank">県北芸術祭</a>（楽曲: <a href="https://dova-s.jp/bgm/play2115.html" target="_blank">Forest of Conifer Trees</a>）等）や、<a href="https://www.youtube.com/watch?v=slKkMmgJ1HY" target="_blank">大阪・関西万博テーマ事業「いのちの輝きプロジェクト」</a>（落合陽一プロデュース）へ楽曲を提供。
 
 **公共機関・自治体コンテンツへの楽曲提供**
