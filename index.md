@@ -5,7 +5,7 @@ layout: default
 ---
 
 # 柴田 健一 / Kenichi Shibata
-玉川大学 工学部 ソフトウェアサイエンス学科 講師 / 理化学研究所 AIP 分散型ビッグデータチーム 客員研究員
+玉川大学 工学部 ソフトウェアサイエンス学科 講師 / 理化学研究所 AIP 客員研究員
 
 ---
 
@@ -131,13 +131,13 @@ layout: default
 ### 主な活動領域
 
 **メディアアート・大型プロジェクトへの楽曲提供**
-落合陽一氏の映像作品（筑波大学デジタルネイチャー研究室・個展「未知への追憶」・県北芸術祭 等）や、<a href="https://www.youtube.com/watch?v=slKkMmgJ1HY" target="_blank">大阪・関西万博テーマ事業「いのちの輝きプロジェクト」</a>（落合陽一プロデュース）へ楽曲を提供。国際的な知名度を持つアーティストや大型公共事業との協働実績がある。
+落合陽一氏の映像作品（筑波大学デジタルネイチャー研究室・個展「<a href="https://www.youtube.com/watch?v=98VGJzv7xlc" target="_blank">未知への追憶</a>」・<a href="https://www.youtube.com/watch?v=hE2CStcAO8o" target="_blank">県北芸術祭</a>（楽曲: <a href="https://dova-s.jp/bgm/play2115.html" target="_blank">Forest of Conifer Trees</a>）等）や、<a href="https://www.youtube.com/watch?v=slKkMmgJ1HY" target="_blank">大阪・関西万博テーマ事業「いのちの輝きプロジェクト」</a>（落合陽一プロデュース）へ楽曲を提供。
 
 **公共機関・自治体コンテンツへの楽曲提供**
-<a href="https://www.youtube.com/watch?v=XeKHCGbArYI" target="_blank">環境省・佐渡自然保護官事務所</a> のトキ野生復帰映像（日・英両版）、新潟県公式チャンネル「佐渡棚田紀行」、大分県立美術館の展覧会映像など、行政・公立文化施設の公式コンテンツで採用。
+<a href="https://www.youtube.com/watch?v=XeKHCGbArYI" target="_blank">環境省・佐渡自然保護官事務所</a> のトキ野生復帰映像（日・英両版）、新潟県公式チャンネル「<a href="https://www.youtube.com/watch?v=h37s0PBu4AE" target="_blank">佐渡棚田紀行</a>」、<a href="https://www.youtube.com/watch?v=mprRYj43jGg" target="_blank">大分県立美術館の展覧会映像</a>など、行政・公立文化施設の公式コンテンツで採用。
 
 **ゲーム・映像作品への楽曲提供**
-人気ゲーム・アニメ化作品「<a href="https://dic.pixiv.net/a/%E6%AE%BA%E6%88%AE%E3%81%AE%E5%A4%A9%E4%BD%BF#h2_3" target="_blank">殺戮の天使</a>」、インディゲーム「<a href="https://life0.info/dreaminher/index" target="_blank">Dreamin' Her</a>」へのBGM提供。映画「<a href="http://www.fidff.com/com/2016-130.html" target="_blank">あかいあかい青りんご</a>」EDテーマ、短編映画「Reポエム」音楽担当など、映像・ゲーム分野での商業実績多数。
+人気ゲーム作品「<a href="https://dic.pixiv.net/a/%E6%AE%BA%E6%88%AE%E3%81%AE%E5%A4%A9%E4%BD%BF#h2_3" target="_blank">殺戮の天使</a>」、インディゲーム「<a href="https://life0.info/dreaminher/index" target="_blank">Dreamin' Her</a>」へのBGM提供。映画「<a href="http://www.fidff.com/com/2016-130.html" target="_blank">あかいあかい青りんご</a>」EDテーマ、短編映画「Reポエム」音楽担当など、映像・ゲーム分野での商業実績多数。
 
 **XR・現代アート作品との協働**
 <a href="https://www.tactus.jp/nox" target="_blank">Rio Nakada "NOX"</a>（XR作品, 2025）、短編映画 <a href="https://signsoflife.tokyo/news/article/1002/" target="_blank">SIGNS OF LIFE™</a>（2024）など、先端的な表現領域での音楽担当実績。
