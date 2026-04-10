@@ -4,8 +4,12 @@ description: Personal Data & AI, Graph-Document, Learning Support, Multimodal Se
 layout: default
 ---
 
+<img src="images/kenichi_shibata.jpg" alt="Kenichi Shibata" width="220" style="border-radius:50%; float:right; margin:0 0 1em 1.5em; object-fit:cover; aspect-ratio:1/1;">
+
 # 柴田 健一 / Kenichi Shibata
 玉川大学 工学部 ソフトウェアサイエンス学科 講師 / 理化学研究所 AIP 客員研究員
+
+<div style="clear:both;"></div>
 
 ---
 
