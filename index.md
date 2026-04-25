@@ -4,6 +4,10 @@ description: Personal Data & AI, Graph-Document, Learning Support, Multimodal Se
 layout: default
 ---
 
+<div style="text-align:right; margin-bottom:0.5em;">
+🌐 <strong>日本語</strong> / <a href="en.html">English</a>
+</div>
+
 <img src="images/kenichi_shibata.jpg" alt="Kenichi Shibata" width="220" style="border-radius:50%; float:right; margin:0 0 1em 1.5em; object-fit:cover; aspect-ratio:1/1;">
 
 # 柴田 健一 / Kenichi Shibata
@@ -33,7 +37,7 @@ layout: default
 # AI研究開発/AI Research & Development
 </h2>
 
-### 株式会社HEROICとの共同研究
+### [株式会社HEROICとの共同研究](https://heroic.co.jp/pdf/tamagawa_press.pdf)
 **人的資本可視化のためのマルチモーダルセンシング情報を用いたエンゲージメント評価に関する研究**
 
 企業の競争力・持続成長の源泉である「人的資本」のエンゲージメントを、生体情報・行動データ・環境データなどのマルチモーダルセンシング情報から定量的に評価する手法を開発。評価結果を企業の人材戦略・投資判断に活用する新しいフレームワークの構築を目指す。
