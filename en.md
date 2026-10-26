@@ -2,22 +2,24 @@
 title: Kenichi Shibata | Research Portfolio (English)
 description: Personal Data & AI, Graph-Document, Learning Support, Multimodal Sensing.
 layout: default
+lang: en
 ---
 
-<div style="text-align:right; margin-bottom:0.5em;">
-🌐 <a href="index.html">日本語</a> / <strong>English</strong>
-</div>
-
-<img src="images/kenichi_shibata.jpg" alt="Kenichi Shibata" width="220" style="border-radius:50%; float:right; margin:0 0 1em 1.5em; object-fit:cover; aspect-ratio:1/1;">
+<div class="intro" markdown="1">
+<div class="intro__photo"><img src="images/kenichi_shibata.jpg" alt="Kenichi Shibata" width="887" height="887"></div>
 
 # Kenichi Shibata
-Lecturer, Department of Software Science, College of Engineering, Tamagawa University / Visiting Researcher, RIKEN AIP
+{: .intro__name}
 
-<div style="clear:both;"></div>
+Lecturer, Department of Software Science, College of Engineering, Tamagawa University / Visiting Researcher, RIKEN AIP
+{: .intro__affil}
+
+<p class="intro__links"><a class="btn" href="https://brightwaltz.github.io/shibakenlab/">Lab website</a> <a class="textlink" href="https://researchmap.jp/brightwaltz" target="_blank" rel="noopener">researchmap</a></p>
+</div>
 
 ---
 
-## Research Interests
+## Research Interests {#research}
 - **Personal Data & Personal AI** (Distributed PDS, Consent and Governance, Personal Optimization)
 - **Graph-Document** (Knowledge Structuring, Collaborative Authoring, RAG I/O Design)
 - **Learning Support** (University Education, Adult Re-learning, Assessment Design)
@@ -33,9 +35,7 @@ Lecturer, Department of Software Science, College of Engineering, Tamagawa Unive
 
 ---
 
-<h2 style="color:#2c3e50; background:#f0f0f0; padding:0.5em; border-radius:8px;">
-AI Research & Development
-</h2>
+## AI Research & Development {#rd}
 
 ### [Joint Research with HEROIC Inc.](https://heroic.co.jp/pdf/tamagawa_press.pdf)
 **Research on Engagement Evaluation Using Multimodal Sensing Information for Visualizing Human Capital**
@@ -103,7 +103,7 @@ As part of the J-PEAKS regional core project "Visual/Hearing Impairment × AI ×
 
 ---
 
-## Research Themes
+## Research Themes {#themes}
 
 ### 1) Personal Data & Personal AI
 Personal data management based on distributed PDS, and exploration of Personal AI (PAI) dedicated to individuals. Includes operational design, consent management, and evaluation methods in educational and regional contexts.
@@ -126,7 +126,7 @@ Personal data management based on distributed PDS, and exploration of Personal A
 
 ---
 
-## Selected Outputs
+## Selected Outputs {#outputs}
 - **JSAI Journal 2025**
   Prospects for Personal AI Using Small Language Models (Journal of the Japanese Society for Artificial Intelligence)
 - **Course Design Using Generative AI in University Lectures (Peer-Reviewed) 2024**
@@ -144,7 +144,7 @@ Personal data management based on distributed PDS, and exploration of Personal A
 
 ---
 
-## Music Activities
+## Music Activities {#music}
 
 Active since 2010 as a pianist and composer under the name **brightwaltz**. Composes and performs in a style that crosses jazz, pop, and classical, grounded in piano improvisation. Has published a cumulative 65 tracks on the royalty-free BGM site <a href="https://dova-s.jp/creator/detail/81" target="_blank">DOVA-SYNDROME</a>, widely used in video, games, and events.
 
@@ -169,7 +169,7 @@ See <a href="https://brightwaltz.mystrikingly.com/#portfolio" target="_blank">pe
 
 ---
 
-## Crowdfunding
+## Crowdfunding {#crowdfunding}
 
 ### <a href="https://camp-fire.jp/projects/703754/view" target="_blank">Building a Case Database of Musculoskeletal Pain Patients in Acupuncture Clinics Using Electronic Medical Records</a> (Domestic Joint Research, Implemented via Crowdfunding)
 - **Purpose**: Collect cases of musculoskeletal pain patients across multiple acupuncture clinics via electronic medical records, building a research foundation that accumulates and disseminates clinical evidence.
@@ -201,5 +201,5 @@ See <a href="https://brightwaltz.mystrikingly.com/#portfolio" target="_blank">pe
 
 ---
 
-## Contact
+## Contact {#contact}
 For inquiries about research, education, and social implementation, please contact me via the <a href="https://brightwaltz.mystrikingly.com/#contact" target="_blank">personal site</a>.

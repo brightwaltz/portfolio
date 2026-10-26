@@ -1,0 +1,55 @@
+{%- assign ja = true -%}{%- if page.lang == 'en' -%}{%- assign ja = false -%}{%- endif -%}
+<!doctype html>
+<html lang="{{ page.lang | default: 'ja' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if ja %}柴田 健一｜研究ポートフォリオ{% else %}Kenichi Shibata | Research portfolio{% endif %}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="ja" href="{{ '/' | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ '/en.html' | absolute_url }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Kenichi Shibata">
+  <meta property="og:title" content="{% if ja %}柴田 健一｜研究ポートフォリオ{% else %}Kenichi Shibata | Research portfolio{% endif %}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{% if ja %}{{ '/assets/og-ja.png' | absolute_url }}{% else %}{{ '/assets/og-en.png' | absolute_url }}{% endif %}">
+  <meta property="og:locale" content="{% if ja %}ja_JP{% else %}en_US{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#FAFAF8">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#main">{% if ja %}本文へ移動{% else %}Skip to content{% endif %}</a>
+  <header class="bar">
+    <div class="bar__in">
+      <a class="bar__name" href="#main">{% if ja %}柴田 健一{% else %}Kenichi Shibata{% endif %}</a>
+      {%- capture navlinks -%}
+      {%- if ja -%}
+      <a href="#research">研究</a><a href="#rd">AI研究開発</a><a href="#outputs">業績</a><a href="#music">音楽</a><a href="#crowdfunding">クラウドファンディング</a><a href="#contact">連絡</a>
+      {%- else -%}
+      <a href="#research">Research</a><a href="#rd">AI R&amp;D</a><a href="#outputs">Outputs</a><a href="#music">Music</a><a href="#crowdfunding">Crowdfunding</a><a href="#contact">Contact</a>
+      {%- endif -%}
+      {%- endcapture %}
+      <nav class="bar__nav" aria-label="{% if ja %}ページ内の目次{% else %}On this page{% endif %}">{{ navlinks }}</nav>
+      <details class="bar__toc">
+        <summary>{% if ja %}目次{% else %}Contents{% endif %}</summary>
+        <nav aria-label="{% if ja %}ページ内の目次{% else %}On this page{% endif %}">{{ navlinks }}</nav>
+      </details>
+      {% if ja %}<a class="bar__lang" href="en.html" hreflang="en" lang="en">English</a>{% else %}<a class="bar__lang" href="./" hreflang="ja" lang="ja">日本語</a>{% endif %}
+    </div>
+  </header>
+  <main id="main" class="page">
+{{ content }}
+  </main>
+  <footer class="foot">
+    <p lang="en">© {{ site.time | date: '%Y' }} Kenichi Shibata</p>
+    <p>{% if ja %}最終更新{% else %}Updated{% endif %} <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: '%Y-%m-%d' }}</time></p>
+  </footer>
+</body>
+</html>
