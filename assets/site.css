@@ -57,9 +57,13 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   line-break: strict;
-  word-break: auto-phrase;
   overflow-wrap: break-word;
+  text-spacing-trim: trim-start;
 }
+/* 文節で折るのは短い文と見出しだけ。長い本文は通常の改行で行末をそろえる */
+.hero__roles li, .approach li, .section__lead, .labnote p,
+.beat__body, .fund__purpose, .tagline__text, .interests__detail { word-break: auto-phrase; }
+.nw { white-space: nowrap; }
 /* 平らな面に薄いノイズ（4%） */
 body::before {
   content: "";
@@ -576,6 +580,7 @@ p, li, dd { text-wrap: pretty; }
 @media (min-width: 1024px) {
   .approach li { font-size: 24px; line-height: 40px; }
 }
+.keys { display: grid; gap: var(--s-200); margin-top: var(--s-300); }
 .interests { display: grid; border-top: 1px solid var(--rule); }
 .interests li {
   display: grid;
@@ -585,9 +590,9 @@ p, li, dd { text-wrap: pretty; }
 }
 .interests__name { font-weight: 600; }
 .interests__detail { color: var(--muted); font-size: 14px; line-height: 24px; }
-@media (min-width: 768px) {
-  .interests li { grid-template-columns: 1fr 1fr; gap: var(--s-300); align-items: baseline; }
-}
+.interests li { padding: var(--s-100) 0; gap: var(--s-25); }
+.interests__name { font-size: 14px; line-height: 20px; }
+.interests__detail { font-size: 12px; line-height: 20px; }
 
 .themes { display: grid; border-top: 1px solid var(--rule); }
 .theme {
@@ -683,6 +688,21 @@ p, li, dd { text-wrap: pretty; }
   .work--feature .work__title { font-size: 30px; line-height: 40px; }
 }
 
+.works--compact { border-top: 0; }
+@media (min-width: 1024px) {
+  .works--compact { grid-template-columns: 1fr 1fr; column-gap: var(--s-700); }
+  .works--compact .work { grid-template-columns: 1fr; gap: var(--s-200); padding: var(--s-400) 0; }
+  .works--compact .work__title { font-size: 20px; line-height: 28px; }
+}
+.works--compact .work__body p { font-size: 14px; line-height: 24px; }
+
+/* 節に入ったとき、目印の音符が拍の位置に置かれる */
+.marker__staff circle.on, .marker__staff line.stem { transform-box: fill-box; transform-origin: center bottom; }
+.js [data-reveal] .marker__staff circle.on { transform: scale(0.2); opacity: 0; transition: transform var(--t-move) var(--ease) 300ms, opacity var(--t-fade) var(--ease) 300ms; }
+.js [data-reveal] .marker__staff line.stem { transform: scaleY(0); transition: transform var(--t-move) var(--ease) 500ms; }
+.js [data-reveal].is-in .marker__staff circle.on { transform: none; opacity: 1; }
+.js [data-reveal].is-in .marker__staff line.stem { transform: none; }
+
 /* 音楽 */
 .section--music { background: var(--surface); }
 .stats { display: flex; flex-wrap: wrap; gap: var(--s-300) var(--s-500); }
@@ -713,16 +733,15 @@ p, li, dd { text-wrap: pretty; }
   gap: var(--s-300);
   align-content: start;
   justify-items: start;
-  padding: var(--s-400) var(--s-300);
-  border-radius: var(--r-2xl);
-  background: var(--surface);
+  padding: var(--s-400) 0 0;
+  border-top: 1px solid var(--text);
 }
 .fund__title { font-size: 20px; line-height: 28px; }
-.fund .stats { width: 100%; padding-block: var(--s-300); border-block: 1px solid rgb(22 22 22 / 0.12); }
+.fund .stats { width: 100%; padding-block: var(--s-300); border-block: 1px solid var(--rule); }
 .fund__purpose { font-weight: 500; }
 @media (min-width: 1024px) {
   .funds { grid-template-columns: 1fr 1fr; }
-  .fund { padding: var(--s-500); }
+  .funds { column-gap: var(--s-700); }
   .fund__title { font-size: 24px; line-height: 32px; }
 }
 
@@ -758,6 +777,7 @@ p, li, dd { text-wrap: pretty; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .js [data-reveal] .marker__staff circle.on, .js [data-reveal] .marker__staff line.stem { opacity: 1; transform: none; transition: none; }
   .js .tagline__word { color: var(--text); transition: none; }
   .staff__note, .beat__no { transition: none; }
   .menu, .menu__list li, .nav__line, .btn, .link, .skip { transition-duration: 0ms !important; }

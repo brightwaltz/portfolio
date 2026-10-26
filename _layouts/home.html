@@ -146,15 +146,7 @@
         <header class="split__head" data-reveal>
           {% include marker.html beat=1 label=d.research.label %}
           <h2 class="h2" id="research-title">{{ d.research.title }}</h2>
-        </header>
-        <div class="split__body">
-          <ol class="approach" data-reveal>
-            {%- for a in d.research.approach %}
-            <li>{{ a }}</li>
-            {%- endfor %}
-          </ol>
-
-          <div class="block" data-reveal>
+          <div class="keys">
             <h3 class="h3">{{ d.research.interests_title }}</h3>
             <ul class="interests">
               {%- for i in d.research.interests %}
@@ -162,6 +154,13 @@
               {%- endfor %}
             </ul>
           </div>
+        </header>
+        <div class="split__body">
+          <ol class="approach" data-reveal>
+            {%- for a in d.research.approach %}
+            <li>{{ a }}</li>
+            {%- endfor %}
+          </ol>
 
           <div class="block" data-reveal>
             <h3 class="h3">{{ d.research.themes_title }}</h3>
@@ -227,10 +226,35 @@
           <h2 class="h2" id="practice-title">{{ d.practice.title }}</h2>
           <p class="section__lead">{{ d.practice.lead }}</p>
         </header>
+        {%- assign feats = d.practice.items | where_exp: "w", "w.feature == true" %}
+        {%- assign rest = d.practice.items | where_exp: "w", "w.feature != true" %}
         <ol class="works">
-          {%- for w in d.practice.items %}
-          <li class="work{% if w.size %} work--feature{% endif %}" data-reveal>
-            <span class="work__no mono" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+          {%- for w in feats %}
+          {%- assign n = forloop.index %}{% assign cls = " work--feature" %}
+          <li class="work{{ cls }}" data-reveal>
+            <span class="work__no mono" aria-hidden="true">{% if n < 10 %}0{% endif %}{{ n }}</span>
+            <div class="work__head">
+              <p class="work__kind">{{ w.kind }}</p>
+              <h3 class="work__title">{{ w.title }}</h3>
+            </div>
+            <div class="work__body">
+              <p>{{ w.body }}</p>
+              <ul class="tags">{% for t in w.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+              {%- if w.href %}
+              <a class="link" href="{{ w.href }}">{{ w.href_label }}{{ ext }}</a>
+              {%- endif %}
+              {%- if w.anchor %}
+              <a class="link" href="#{{ w.anchor }}">{{ w.anchor_label }}{{ next }}</a>
+              {%- endif %}
+            </div>
+          </li>
+          {%- endfor %}
+        </ol>
+        <ol class="works works--compact" start="{{ feats.size | plus: 1 }}">
+          {%- for w in rest %}
+          {%- assign n = forloop.index | plus: feats.size %}{% assign cls = "" %}
+          <li class="work{{ cls }}" data-reveal>
+            <span class="work__no mono" aria-hidden="true">{% if n < 10 %}0{% endif %}{{ n }}</span>
             <div class="work__head">
               <p class="work__kind">{{ w.kind }}</p>
               <h3 class="work__title">{{ w.title }}</h3>

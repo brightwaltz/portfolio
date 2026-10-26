@@ -11,7 +11,7 @@
         e.target.classList.add('is-in');
         io.unobserve(e.target);
       }
-    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    }, { rootMargin: '0px 0px -4% 0px', threshold: 0 });
     reveals.forEach((el) => io.observe(el));
   } else {
     reveals.forEach((el) => el.classList.add('is-in'));

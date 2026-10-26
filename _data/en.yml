@@ -40,7 +40,7 @@ hero:
   name_sub_lang: ja
   roles:
     - Lecturer, Department of Software Science, College of Engineering, Tamagawa University
-    - Tamagawa Academic Research Institute, K-16 Education Research Center (concurrent)
+    - Tamagawa Academic Research Institute, <span class="nw">K-16</span> Education Research Center (concurrent)
     - Visiting Researcher, RIKEN Center for Advanced Intelligence Project (AIP)
   lead: I work on user-sovereign personal data and individually optimized support services, with field trials across education, eldercare and community settings.
   cta_primary: Visit the lab website
@@ -133,14 +133,14 @@ practice:
       href_label: Press release (PDF, Japanese)
       body: Developing methods to quantitatively evaluate the engagement of human capital, the source of corporate competitiveness and sustainable growth, from biometric, behavioral and environmental data. The goal is a new framework that feeds the results into HR strategy and investment decisions.
       tags: [Multimodal, Engagement, Human capital]
-      size: wide
+      feature: true
     - kind: Tokyo University of the Arts × Hagi × Tsukuba University of Technology × Tamagawa University (2026)
       title: “Forms to Touch, Forms to See” exhibition
       href: https://www.geidai.ac.jp/news/20260326156923.html
       href_label: Announcement (Japanese)
       body: As part of the J-PEAKS regional core project “Visual and Hearing Impairment × AI × Art,” I took part as a collaborator in an exhibition at Hagi Meirin Gakusha, Yamaguchi. Tactile sculpting experiences using 3D printing and sensing explored new possibilities for Hagi ware and connections among diverse people. Co-organized with Tokyo University of the Arts, CASA Inc., Makino Kiln, EYES Inc. and Tsukuba University of Technology (March 29 to April 29, 2026).
       tags: [3D printing, Sensing, Accessibility]
-      size: tall
+      feature: true
     - kind: With the Tamagawa Academy Coral Research Club
       title: Coral aquaculture support app
       body: Educational support that helps new members and students understand coral breeding and aquaculture. It combines animation generation AI for the breeding process, audio podcasts generated from long texts, and conversational AI for Q&A.
