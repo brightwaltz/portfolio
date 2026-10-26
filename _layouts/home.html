@@ -1,0 +1,347 @@
+{%- assign d = site.data[page.lang] -%}
+{%- capture ext %}{% include icons/arrow-up-right.svg %}{% endcapture -%}
+{%- capture next %}{% include icons/arrow-right.svg %}{% endcapture -%}
+<!doctype html>
+<html lang="{{ d.meta.html_lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ d.meta.title }}</title>
+  <meta name="description" content="{{ d.meta.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="ja" href="{{ '/' | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ '/en.html' | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Kenichi Shibata">
+  <meta property="og:title" content="{{ d.meta.title }}">
+  <meta property="og:description" content="{{ d.meta.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ d.meta.og_image | prepend: '/' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="{{ d.meta.og_locale }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#F7F7F4">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&family=Noto+Sans+JP:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  <link rel="preload" as="image" href="{{ '/images/kenichi_shibata.jpg' | relative_url }}">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="{{ '/assets/site.js' | relative_url }}" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ d.hero.name }}",
+    "alternateName": "Kenichi Shibata",
+    "jobTitle": "{{ d.hero.roles[0] }}",
+    "affiliation": [
+      {"@type": "CollegeOrUniversity", "name": "{% if page.lang == 'ja' %}玉川大学{% else %}Tamagawa University{% endif %}"},
+      {"@type": "ResearchOrganization", "name": "{% if page.lang == 'ja' %}理化学研究所 革新知能統合研究センター{% else %}RIKEN Center for Advanced Intelligence Project{% endif %}"}
+    ],
+    "image": "{{ '/images/kenichi_shibata.jpg' | absolute_url }}",
+    "url": "{{ page.url | absolute_url }}",
+    "sameAs": [
+      "{{ site.links.researchmap }}",
+      "{{ site.links.lab }}",
+      "{{ site.links.strikingly }}",
+      "https://soundcloud.com/brightwaltz"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">{{ d.ui.skip }}</a>
+
+  <header class="nav" data-nav>
+    <div class="nav__bar">
+      <a class="nav__home" href="#top" aria-label="{{ d.ui.home_label }}">{{ d.hero.name }}</a>
+      <nav class="nav__links" aria-label="{{ d.ui.nav_label }}">
+        <ul>
+          {%- for n in d.nav %}
+          <li><a href="#{{ n.id }}" data-nav-link="{{ n.id }}">{{ n.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+      <a class="nav__lang" href="{{ d.ui.lang_href }}" hreflang="{{ d.ui.lang_code }}" lang="{{ d.ui.lang_code }}">{{ d.ui.lang_label }}</a>
+      <a class="btn btn--sm nav__lab" href="{{ site.links.lab }}">{{ d.ui.lab_short }}{{ ext }}</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle
+        data-label-open="{{ d.ui.menu_open }}" data-label-close="{{ d.ui.menu_close }}" aria-label="{{ d.ui.menu_open }}">
+        <span class="nav__line"></span><span class="nav__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <nav aria-label="{{ d.ui.nav_label }}">
+      <ul class="menu__list">
+        {%- for n in d.nav %}
+        <li style="--i: {{ forloop.index0 }}"><a href="#{{ n.id }}" data-menu-link>{{ n.label }}</a></li>
+        {%- endfor %}
+        <li style="--i: {{ d.nav.size }}"><a href="{{ site.links.lab }}">{{ d.ui.lab_short }}{{ ext }}</a></li>
+        <li style="--i: {{ d.nav.size | plus: 1 }}"><a href="{{ d.ui.lang_href }}" hreflang="{{ d.ui.lang_code }}" lang="{{ d.ui.lang_code }}">{{ d.ui.lang_label }}</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow" lang="en">{{ d.hero.eyebrow }}</p>
+          <h1 class="hero__name" id="hero-name">
+            <span class="hero__name-main">{{ d.hero.name }}</span>
+            <span class="hero__name-sub" lang="{{ d.hero.name_sub_lang }}">{{ d.hero.name_sub }}</span>
+          </h1>
+          <ul class="hero__roles">
+            {%- for r in d.hero.roles %}
+            <li>{{ r }}</li>
+            {%- endfor %}
+          </ul>
+          <p class="hero__lead">{{ d.hero.lead }}</p>
+          <div class="hero__actions">
+            <a class="btn btn--lg" href="{{ site.links.lab }}">{{ d.hero.cta_primary }}{{ next }}</a>
+            <a class="link" href="{{ site.links.researchmap }}">{{ d.hero.cta_secondary }}{{ ext }}</a>
+          </div>
+        </div>
+        <figure class="hero__photo">
+          <img src="{{ '/images/kenichi_shibata.jpg' | relative_url }}" width="887" height="887" alt="{{ d.hero.photo_alt }}" fetchpriority="high">
+          <figcaption>{{ d.hero.degree }}</figcaption>
+        </figure>
+      </div>
+
+      <div class="wrap beats" data-beats>
+        <div class="beats__head">
+          <p class="eyebrow">{{ d.beats.label }}</p>
+          <button class="sound" type="button" aria-pressed="false" data-sound hidden><span class="sound__dot" aria-hidden="true"></span>{{ d.beats.sound }}</button>
+        </div>
+        <div class="measure">
+          <div class="staff" aria-hidden="true">
+            <span class="staff__lines"><i></i><i></i><i></i><i></i><i></i></span>
+            <span class="staff__sig"><b>3</b><b>4</b></span>
+            <span class="staff__note"></span>
+          </div>
+          <ol class="measure__beats">
+            {%- for b in d.beats.items %}
+            <li class="beat{% if forloop.first %} beat--strong{% endif %}">
+              <a href="#{{ b.id }}">
+                <span class="beat__no" aria-hidden="true">{{ b.num }}</span>
+                <span class="beat__title">{{ b.title }}</span>
+                <span class="beat__body">{{ b.body }}</span>
+              </a>
+            </li>
+            {%- endfor %}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-title" data-section>
+      <div class="wrap split">
+        <header class="split__head" data-reveal>
+          {% include marker.html beat=1 label=d.research.label %}
+          <h2 class="h2" id="research-title">{{ d.research.title }}</h2>
+        </header>
+        <div class="split__body">
+          <ol class="approach" data-reveal>
+            {%- for a in d.research.approach %}
+            <li>{{ a }}</li>
+            {%- endfor %}
+          </ol>
+
+          <div class="block" data-reveal>
+            <h3 class="h3">{{ d.research.interests_title }}</h3>
+            <ul class="interests">
+              {%- for i in d.research.interests %}
+              <li><span class="interests__name" lang="en">{{ i.name }}</span>{% if i.detail != "" %}<span class="interests__detail">{{ i.detail }}</span>{% endif %}</li>
+              {%- endfor %}
+            </ul>
+          </div>
+
+          <div class="block" data-reveal>
+            <h3 class="h3">{{ d.research.themes_title }}</h3>
+            <ol class="themes">
+              {%- for t in d.research.themes %}
+              <li class="theme">
+                <span class="theme__no mono" aria-hidden="true">{{ forloop.index }}</span>
+                <h4 class="theme__title" lang="en">{{ t.title }}</h4>
+                <p class="theme__body">{{ t.body }}</p>
+                <ul class="tags" lang="en">{% for k in t.keywords %}<li>{{ k }}</li>{% endfor %}</ul>
+              </li>
+              {%- endfor %}
+            </ol>
+          </div>
+
+          <div class="block" data-reveal>
+            <h3 class="h3">{{ d.research.outputs_title }}</h3>
+            <ol class="outputs">
+              {%- for o in d.research.outputs %}
+              <li>
+                <span class="outputs__year mono">{{ o.year }}</span>
+                <span class="outputs__title">{{ o.title }}</span>
+                <span class="outputs__venue">{{ o.venue }}</span>
+              </li>
+              {%- endfor %}
+            </ol>
+            <p class="note">{{ d.research.outputs_note }} <a class="link" href="{{ site.links.researchmap }}">{{ d.research.outputs_link }}{{ ext }}</a></p>
+          </div>
+
+          <div class="block" data-reveal>
+            <h3 class="h3">{{ d.research.teaching_title }}</h3>
+            <ul class="plain">
+              {%- for t in d.research.teaching %}
+              <li>{{ t }}</li>
+              {%- endfor %}
+            </ul>
+          </div>
+
+          <aside class="labnote" data-reveal>
+            <p>{{ d.research.lab_note }}</p>
+            <a class="btn" href="{{ site.links.lab }}">{{ d.research.lab_link }}{{ next }}</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="tagline" aria-labelledby="tagline-label" data-tagline>
+      <div class="wrap">
+        <p class="eyebrow" id="tagline-label">{{ d.tagline.label }}</p>
+        <p class="tagline__text">
+          {%- for line in d.tagline.lines -%}
+          <span class="tagline__line">{% for w in line %}<span class="tagline__word" data-word>{{ w }}</span>{% unless forloop.last %}{% if page.lang == 'en' %} {% else %}<wbr>{% endif %}{% endunless %}{% endfor %}</span>
+          {%- endfor -%}
+        </p>
+        <a class="link" href="{{ site.links.lab }}">{{ d.tagline.link }}{{ ext }}</a>
+      </div>
+    </section>
+
+    <section class="section" id="practice" aria-labelledby="practice-title" data-section>
+      <div class="wrap">
+        <header class="section__head" data-reveal>
+          {% include marker.html beat=2 label=d.practice.label %}
+          <h2 class="h2" id="practice-title">{{ d.practice.title }}</h2>
+          <p class="section__lead">{{ d.practice.lead }}</p>
+        </header>
+        <ol class="works">
+          {%- for w in d.practice.items %}
+          <li class="work" data-reveal>
+            <span class="work__no mono" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+            <div class="work__head">
+              <p class="work__kind">{{ w.kind }}</p>
+              <h3 class="work__title">{{ w.title }}</h3>
+            </div>
+            <div class="work__body">
+              <p>{{ w.body }}</p>
+              <ul class="tags">{% for t in w.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+              {%- if w.href %}
+              <a class="link" href="{{ w.href }}">{{ w.href_label }}{{ ext }}</a>
+              {%- endif %}
+              {%- if w.anchor %}
+              <a class="link" href="#{{ w.anchor }}">{{ w.anchor_label }}{{ next }}</a>
+              {%- endif %}
+            </div>
+          </li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--music" id="music" aria-labelledby="music-title" data-section>
+      <div class="wrap split">
+        <header class="split__head" data-reveal>
+          {% include marker.html beat=3 label=d.music.label %}
+          <h2 class="h2" id="music-title">{{ d.music.title }}</h2>
+          <p class="section__lead">{{ d.music.lead }}</p>
+          <dl class="stats stats--music">
+            {%- for s in d.music.stats %}
+            <div><dt>{{ s.label }}</dt><dd class="stats__value">{{ s.value }}</dd></div>
+            {%- endfor %}
+          </dl>
+        </header>
+        <div class="split__body">
+          <dl class="areas" data-reveal>
+            {%- for a in d.music.areas %}
+            <div class="area">
+              <dt>{{ a.title }}</dt>
+              <dd>{{ a.body }}</dd>
+            </div>
+            {%- endfor %}
+          </dl>
+          <ul class="linklist" data-reveal>
+            {%- for l in d.music.links %}
+            <li><a class="link" href="{{ l.href }}">{{ l.label }}{{ ext }}</a></li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="crowdfunding" aria-labelledby="cf-title" data-section>
+      <div class="wrap">
+        <header class="section__head" data-reveal>
+          {% include marker.html beat="coda" label=d.crowdfunding.label lang="en" %}
+          <h2 class="h2" id="cf-title">{{ d.crowdfunding.title }}</h2>
+          <p class="section__lead">{{ d.crowdfunding.lead }}</p>
+        </header>
+        <div class="funds">
+          {%- for c in d.crowdfunding.items %}
+          <article class="fund" data-reveal>
+            <p class="work__kind">{{ c.kind }}</p>
+            <h3 class="fund__title">{{ c.title }}</h3>
+            <dl class="stats" data-count>
+              {%- for s in c.stats %}
+              <div><dt>{{ s.label }}</dt><dd class="stats__value">{{ s.value }}</dd></div>
+              {%- endfor %}
+            </dl>
+            <p class="fund__purpose">{{ c.purpose }}</p>
+            <ul class="plain">
+              {%- for o in c.outcomes %}
+              <li>{{ o }}</li>
+              {%- endfor %}
+            </ul>
+            <a class="link" href="{{ c.href }}">{{ d.crowdfunding.site_label }}{{ ext }}</a>
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="wrap closing__grid">
+        <div class="closing__main" data-reveal>
+          <h2 class="h2" id="closing-title">{{ d.closing.title }}</h2>
+          <p class="section__lead">{{ d.closing.body }}</p>
+          <div class="hero__actions">
+            <a class="btn btn--lg" href="{{ site.links.lab }}">{{ d.closing.primary }}{{ next }}</a>
+            <a class="link" href="{{ site.links.researchmap }}">{{ d.closing.secondary }}{{ ext }}</a>
+          </div>
+        </div>
+        <div class="closing__side" data-reveal>
+          <h3 class="h3">{{ d.closing.contact_title }}</h3>
+          <p>{{ d.closing.contact_body }}</p>
+          <a class="link" href="{{ site.links.contact }}">{{ d.closing.contact_link }}{{ ext }}</a>
+          <h3 class="h3">{{ d.closing.more_title }}</h3>
+          <ul class="linklist">
+            {%- for l in d.closing.more %}
+            <li><a class="link" href="{{ l.href }}">{{ l.label }}{{ ext }}</a></li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__row">
+      <p lang="en">© {{ site.time | date: '%Y' }} Kenichi Shibata</p>
+      <p>{{ d.ui.updated }} <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: '%Y-%m-%d' }}</time></p>
+      <a class="link" href="#top">{{ d.ui.back_to_top }}</a>
+    </div>
+  </footer>
+</body>
+</html>

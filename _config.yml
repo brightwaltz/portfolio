@@ -1,0 +1,16 @@
+title: Kenichi Shibata
+url: https://brightwaltz.github.io
+baseurl: /portfolio
+markdown: kramdown
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .claude
+  - scripts
+links:
+  lab: https://brightwaltz.github.io/shibakenlab/
+  researchmap: https://researchmap.jp/brightwaltz
+  contact: https://brightwaltz.mystrikingly.com/#contact
+  strikingly: https://brightwaltz.mystrikingly.com

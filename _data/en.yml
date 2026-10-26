@@ -1,0 +1,255 @@
+# English page (en.html). Keep the same structure as ja.yml.
+# Edit wording here only. Styling lives in assets/site.css, markup in _layouts/home.html.
+# Values may contain HTML (links); it is output as is.
+
+meta:
+  html_lang: en
+  og_locale: en_US
+  title: Kenichi Shibata | Research portfolio
+  description: Lecturer at Tamagawa University and visiting researcher at RIKEN AIP. Research and field projects on user-sovereign personal data, Personal AI, graph documents, learning support and multimodal sensing. Pianist and composer as brightwaltz.
+  og_image: assets/og-en.png
+
+ui:
+  skip: Skip to content
+  home_label: Kenichi Shibata, back to top
+  menu_open: Open menu
+  menu_close: Close menu
+  nav_label: On this page
+  lang_label: 日本語
+  lang_href: ./
+  lang_code: ja
+  lab_short: Lab website
+  external: (opens in a new tab)
+  updated: Updated
+  back_to_top: Back to top
+
+nav:
+  - id: research
+    label: Research
+  - id: practice
+    label: Practice
+  - id: music
+    label: Music
+  - id: crowdfunding
+    label: Crowdfunding
+
+hero:
+  eyebrow: Research portfolio
+  name: Kenichi Shibata
+  name_sub: 柴田 健一
+  name_sub_lang: ja
+  roles:
+    - Lecturer, Department of Software Science, College of Engineering, Tamagawa University
+    - Tamagawa Academic Research Institute, K-16 Education Research Center (concurrent)
+    - Visiting Researcher, RIKEN Center for Advanced Intelligence Project (AIP)
+  lead: I work on user-sovereign personal data and individually optimized support services, with field trials across education, eldercare and community settings.
+  cta_primary: Visit the lab website
+  cta_secondary: See publications on researchmap
+  photo_alt: Kenichi Shibata playing a grand piano
+  degree: Ph.D. in Informatics, Shizuoka University, 2017
+
+beats:
+  sound: Play the beat
+  label: Three lines of work
+  items:
+    - num: "1"
+      id: research
+      title: Research
+      body: User-sovereign personal data and Personal AI, graph documents, learning support and multimodal sensing.
+    - num: "2"
+      id: practice
+      title: Practice
+      body: Eight development projects and joint studies with companies, schools, clinics and an exhibition.
+    - num: "3"
+      id: music
+      title: Music
+      body: Pianist and composer as brightwaltz, writing for film, games and public institutions since 2010.
+
+research:
+  label: 1 / 3
+  title: Research
+  approach:
+    - Centered on data sovereignty for individuals and explainability, with the full path from design to prototype to evaluation in the field.
+    - Treating documents and knowledge as graphs, so they are easier to understand and easier to reuse.
+    - Working on the challenges of an aging society through data and UX, one small field study at a time.
+  interests_title: Research interests
+  interests:
+    - name: Personal Data & Personal AI
+      detail: Distributed PDS, consent and governance, personal optimization
+    - name: Graph-Document
+      detail: Knowledge structuring, collaborative authoring, RAG input and output design
+    - name: Learning Support
+      detail: University education, adult re-learning, assessment design
+    - name: Multimodal / Observational Sensing
+      detail: Aging society, healthcare, daily-life context measurement
+    - name: Human-Computer Interaction / Web & Service Informatics
+      detail: ""
+  themes_title: Research themes
+  themes:
+    - title: Personal Data & Personal AI
+      body: Personal data management based on distributed PDS, and Personal AI (PAI) dedicated to each individual. Includes operational design, consent management and evaluation methods in educational and regional contexts.
+      keywords: [PDS / PAI, Data Governance, Consent, Privacy-by-Design]
+    - title: Graph-Document for Learning & Work
+      body: Making thinking visible and reusable through collaborative graph-document authoring. Structuring for learning, training and internal knowledge, along with quality design for RAG input and output.
+      keywords: [Graph-Document, Collaborative Authoring, Critical Thinking, RAG]
+    - title: Multimodal / Observational Sensing
+      body: Understanding and evaluating states through multi-perspective observation of audio, video and behavior. Aiming for lightweight measurement that fits naturally into on-site operations.
+      keywords: [Multimodal, Engagement, Aging Society, Human Factors]
+  outputs_title: Selected outputs
+  outputs:
+    - year: "2025"
+      venue: Journal of the Japanese Society for Artificial Intelligence
+      title: Prospects for Personal AI using small language models
+    - year: "2024"
+      venue: Bulletin of the College of Engineering, Tamagawa University (peer reviewed)
+      title: Proposal and practice of course design using text generation AI
+    - year: "2023"
+      venue: NCSP 2023 (oral presentation, session chair at the same conference)
+      title: Collaborative Learning Support Environment Utilizing Graph Documents
+  outputs_note: The complete list of papers, talks and awards is on researchmap.
+  outputs_link: See publications on researchmap
+  teaching_title: Teaching and service (selected)
+  teaching:
+    - "Tamagawa University: graduation research, laboratory and seminar courses, and more"
+    - "Academic societies: Information Processing Society of Japan, Japanese Society for Artificial Intelligence, Human Interface Society, and others"
+  lab_note: These themes are carried out with students in my lab. The lab website has the details of each study and the students' graduation research.
+  lab_link: Visit the lab website
+
+tagline:
+  label: What the lab works toward
+  lines:
+    - [Personal data, "and small AI,"]
+    - [returned to, the hands, of the person.]
+  link: See this idea as a diagram on the lab website
+
+practice:
+  label: 2 / 3
+  title: Practice
+  lead: Development projects and joint studies carried out with companies, schools and local communities.
+  items:
+    - kind: Joint research with HEROIC Inc.
+      title: Engagement evaluation using multimodal sensing, toward visualizing human capital
+      href: https://heroic.co.jp/pdf/tamagawa_press.pdf
+      href_label: Press release (PDF, Japanese)
+      body: Developing methods to quantitatively evaluate the engagement of human capital, the source of corporate competitiveness and sustainable growth, from biometric, behavioral and environmental data. The goal is a new framework that feeds the results into HR strategy and investment decisions.
+      tags: [Multimodal, Engagement, Human capital]
+      size: wide
+    - kind: Tokyo University of the Arts × Hagi × Tsukuba University of Technology × Tamagawa University (2026)
+      title: “Forms to Touch, Forms to See” exhibition
+      href: https://www.geidai.ac.jp/news/20260326156923.html
+      href_label: Announcement (Japanese)
+      body: As part of the J-PEAKS regional core project “Visual and Hearing Impairment × AI × Art,” I took part as a collaborator in an exhibition at Hagi Meirin Gakusha, Yamaguchi. Tactile sculpting experiences using 3D printing and sensing explored new possibilities for Hagi ware and connections among diverse people. Co-organized with Tokyo University of the Arts, CASA Inc., Makino Kiln, EYES Inc. and Tsukuba University of Technology (March 29 to April 29, 2026).
+      tags: [3D printing, Sensing, Accessibility]
+      size: tall
+    - kind: With the Tamagawa Academy Coral Research Club
+      title: Coral aquaculture support app
+      body: Educational support that helps new members and students understand coral breeding and aquaculture. It combines animation generation AI for the breeding process, audio podcasts generated from long texts, and conversational AI for Q&A.
+      tags: [Generative AI, Podcast, Education]
+    - kind: Distributed personal data management
+      title: Personalized support service
+      body: An app that securely records and manages personal information, built with Flutter/Dart for iOS, Android and macOS. It includes consent-based data governance (access control and a visible usage history) and is designed with future use as a Personal AI (PAI) in mind.
+      tags: [Flutter, PDS, Consent management]
+    - kind: Domestic joint research
+      title: Case database of musculoskeletal pain patients in acupuncture clinics
+      body: Designed and implemented a foundation that systematically collects case information from acupuncture clinics for clinical research and education. The structure anticipates analysis with natural language processing and symptom classification AI, while keeping data entry quick and standardized in the clinic.
+      tags: [Case database, NLP, Clinical]
+      anchor: crowdfunding
+      anchor_label: Funded through crowdfunding
+    - kind: With a game center company
+      title: In-store troubleshooting app
+      body: Patrons scan a QR code posted in the store, reach an AI through LINE, and solve problems in a ChatGPT dialogue. It reduces the load on staff while improving customer satisfaction.
+      tags: [LINE, ChatGPT, QR code]
+    - kind: Dialogue system
+      title: Dialogue system that matches companies and users
+      body: A LINE front end combined with ChatGPT / Claude and RAG on Azure AI Search. It searches company information and user preferences in context and generates well-matched recommendations.
+      tags: [RAG, Azure AI Search, LINE]
+    - kind: LINE official account
+      title: “Mono-wakari no Yoi Joushi” (The understanding boss)
+      body: An AI chatbot where students and other users can talk about their worries. Its ChatGPT dialogue takes in what people write and answers with empathy. Distributed as a public LINE account.
+      tags: [LINE, ChatGPT, Counseling]
+
+music:
+  label: 3 / 3
+  title: Music
+  lead: Active since 2010 as a pianist and composer under the name <strong>brightwaltz</strong>, writing and performing across jazz, pop and classical, grounded in piano improvisation.
+  stats:
+    - value: "2010"
+      label: Year started
+    - value: "65"
+      label: Tracks published on <a href="https://dova-s.jp/creator/detail/81" target="_blank" rel="noopener">DOVA-SYNDROME</a>
+  areas:
+    - title: XR and contemporary art
+      body: Composed the music for Rio Nakada’s immersive work <a href="https://www.tactus.jp/nox" target="_blank" rel="noopener">“Nox”</a>, an official selection of the Venice Immersive Competition at the 83rd Venice International Film Festival (2026). Also scored the short film SIGNS OF LIFE™ (2024).
+    - title: Media art projects
+      body: Provided music for video works by Yoichi Ochiai (University of Tsukuba Digital Nature Lab; solo exhibition “<a href="https://www.youtube.com/watch?v=98VGJzv7xlc" target="_blank" rel="noopener">Memories of the Unknown</a>”; <a href="https://www.youtube.com/watch?v=hE2CStcAO8o" target="_blank" rel="noopener">Kenpoku Art Festival</a>, track <a href="https://dova-s.jp/bgm/play2115.html" target="_blank" rel="noopener">Forest of Conifer Trees</a>) and for the <a href="https://www.youtube.com/watch?v=slKkMmgJ1HY" target="_blank" rel="noopener">Osaka-Kansai Expo theme project “Brilliance of Life”</a> produced by Yoichi Ochiai.
+    - title: Public institutions and local governments
+      body: Used in official content such as the <a href="https://www.youtube.com/watch?v=XeKHCGbArYI" target="_blank" rel="noopener">Ministry of the Environment, Sado Nature Conservation Office</a> films on the reintroduction of the crested ibis (Japanese and English), the Niigata Prefecture channel’s “<a href="https://www.youtube.com/watch?v=h37s0PBu4AE" target="_blank" rel="noopener">Sado Terraced Rice Field Journey</a>,” and <a href="https://www.youtube.com/watch?v=mprRYj43jGg" target="_blank" rel="noopener">exhibition films for the Oita Prefectural Art Museum</a>.
+    - title: Games and film
+      body: "BGM for the game “<a href=\"https://dic.pixiv.net/a/%E6%AE%BA%E6%88%AE%E3%81%AE%E5%A4%A9%E4%BD%BF#h2_3\" target=\"_blank\" rel=\"noopener\">Angels of Death</a>” and the indie game “<a href=\"https://life0.info/dreaminher/index\" target=\"_blank\" rel=\"noopener\">Dreamin’ Her</a>,” the ending theme of the film “Akai Akai Aoringo,” music for the short film “Re: Poem,” and many other commercial credits."
+    - title: Live performance and streaming
+      body: Performed at the Ginza music hall <a href="https://ginzatact.com/detail.php?id=202505_022" target="_blank" rel="noopener">GINZA TACT</a> (2025), the Tachikawa Sansan Illumination commemorative concert (2021) and more. “<a href="https://www.youtube.com/watch?v=d8Z2rtXotro" target="_blank" rel="noopener">Stories Will One Day Help Someone</a>” by Senkohanami (composer) is on major streaming services.
+  links:
+    - label: Music portfolio on my personal site
+      href: https://brightwaltz.mystrikingly.com/#portfolio
+    - label: SoundCloud
+      href: https://soundcloud.com/brightwaltz
+
+crowdfunding:
+  label: Coda
+  title: Crowdfunding
+  lead: Two projects, one in research and one in music, made possible by supporters.
+  items:
+    - kind: Domestic joint research
+      title: Building a case database of musculoskeletal pain patients in acupuncture clinics using electronic medical records
+      href: https://camp-fire.jp/projects/703754/view
+      purpose: Collect cases of musculoskeletal pain patients across multiple acupuncture clinics through electronic medical records, and build a research foundation that accumulates and shares clinical evidence.
+      stats:
+        - value: ¥1,395,289
+          label: Raised
+        - value: 465%
+          label: Of the ¥300,000 goal
+        - value: "240"
+          label: Supporters
+      outcomes:
+        - Set up a system for pilot case collection at about 10 clinics, with the electronic medical records ready for operation.
+        - Gave interim reports and academic presentations, including at the Japan Society of Acupuncture and Moxibustion, and continue with feedback from the field.
+        - Designed the case data to be usable for natural language processing, symptom classification and outcome prediction models.
+    - kind: Personal art project
+      title: “I want to turn my experiences with depression, panic disorder and bipolar disorder into songs”
+      href: https://camp-fire.jp/projects/610230/view
+      purpose: Write and share songs based on my own recovery story as someone living with mental illness, to build understanding and empathy around mental health.
+      stats:
+        - value: ¥421,780
+          label: Raised
+        - value: 140%
+          label: Of the ¥300,000 goal
+        - value: "79"
+          label: Supporters
+      outcomes:
+        - Produced the songs from lyrics and composition through recording and mixing, and delivered early releases and rewards (track data, event invitations, cassette tapes and more).
+        - An art and social expression project so that first-person experiences can reach others as stories that may one day help someone.
+  site_label: Project page on CAMPFIRE (Japanese)
+
+closing:
+  title: Continue on the lab website and researchmap
+  body: The lab website covers each study and the students’ work in detail. researchmap holds the complete list of papers and presentations.
+  primary: Visit the lab website
+  secondary: See publications on researchmap
+  contact_title: Contact
+  contact_body: For inquiries about research, education and field projects, please use the contact form on my personal site.
+  contact_link: Go to the contact form
+  more_title: Elsewhere
+  more:
+    - label: University faculty page (Japanese)
+      href: https://www.tamagawa.ac.jp/college_of_engineering/teachers/detail/209shibata.html
+    - label: Personal site (Strikingly)
+      href: https://brightwaltz.mystrikingly.com
+    - label: Wantedly
+      href: https://www.wantedly.com/id/brightwaltz
+    - label: SoundCloud
+      href: https://soundcloud.com/brightwaltz
+
+notfound:
+  title: This page could not be found
+  body: The address may have changed, or the page may have been removed.
+  back: Back to the English page

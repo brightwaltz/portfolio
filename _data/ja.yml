@@ -1,0 +1,256 @@
+# 日本語ページ（index.html）の本文。英語ページは en.yml。
+# 文言はここだけを直す。見た目は assets/site.css、レイアウトは _layouts/home.html。
+# 値に HTML を書いてよい（リンクなど）。そのまま出力される。
+
+meta:
+  html_lang: ja
+  og_locale: ja_JP
+  title: 柴田 健一｜研究ポートフォリオ
+  description: 玉川大学 工学部 講師・理化学研究所 AIP 客員研究員。本人主権のパーソナルデータとパーソナル AI、グラフ文書、学習支援、マルチモーダルセンシングの研究と社会実装。brightwaltz 名義のピアニスト・作曲家。
+  og_image: assets/og-ja.png
+
+ui:
+  skip: 本文へ移動
+  home_label: 柴田 健一 トップへ
+  menu_open: メニューを開く
+  menu_close: メニューを閉じる
+  nav_label: ページ内の目次
+  lang_label: English
+  lang_href: en.html
+  lang_code: en
+  lab_short: 研究室のサイト
+  external: （別のタブで開きます）
+  updated: 最終更新
+  back_to_top: ページの先頭へ
+
+nav:
+  - id: research
+    label: 研究
+  - id: practice
+    label: 社会実装
+  - id: music
+    label: 音楽
+  - id: crowdfunding
+    label: クラウドファンディング
+
+hero:
+  eyebrow: Research portfolio
+  name: 柴田 健一
+  name_sub: Kenichi Shibata, Ph.D.
+  name_sub_lang: en
+  roles:
+    - 玉川大学 工学部 ソフトウェアサイエンス学科 講師
+    - 玉川大学 学術研究所 K-16一貫教育研究センター（兼任）
+    - 理化学研究所 革新知能統合研究センター（AIP）客員研究員
+  lead: 「本人主権のパーソナルデータ」と「個人最適化型支援サービス」をテーマに、教育・介護・地域コミュニティの現場で研究と実証を重ねてきました。
+  cta_primary: 研究室のサイトを見る
+  cta_secondary: researchmap で業績を見る
+  photo_alt: グランドピアノを弾く柴田 健一
+  degree: 博士（情報学）静岡大学大学院 2017
+
+beats:
+  sound: 拍を鳴らす
+  label: 三つの仕事
+  items:
+    - num: "1"
+      id: research
+      title: 研究
+      body: 本人主権のパーソナルデータとパーソナル AI、グラフ文書、学習支援、マルチモーダルセンシング。
+    - num: "2"
+      id: practice
+      title: 社会実装
+      body: 企業・学校・鍼灸院・展覧会と組んで進めた、8 つの開発と共同研究。
+    - num: "3"
+      id: music
+      title: 音楽
+      body: brightwaltz 名義のピアニスト・作曲家。2010 年から、映像・ゲーム・公共機関の作品に曲を書いています。
+
+research:
+  label: 1 / 3
+  title: 研究
+  approach:
+    - データの本人主権と説明可能性を軸に、設計・試作・評価という現場実装までの一連の流れを意識しています。
+    - 文書や知識をグラフとして扱い、理解のしやすさと再利用のしやすさを両立させます。
+    - 高齢社会の課題にデータと UX で取り組み、小さな実証を積み上げることを重視しています。
+  interests_title: 研究の関心
+  interests:
+    - name: Personal Data & Personal AI
+      detail: 分散 PDS、同意とガバナンス、個人最適化
+    - name: Graph-Document
+      detail: 知識の構造化、協働編集、RAG の入出力設計
+    - name: Learning Support
+      detail: 大学教育・社会人の学び直し、評価設計
+    - name: Multimodal / Observational Sensing
+      detail: 高齢社会・医療・生活文脈の計測
+    - name: Human-Computer Interaction / Web & Service Informatics
+      detail: ""
+  themes_title: 研究テーマ
+  themes:
+    - title: Personal Data & Personal AI
+      body: 分散 PDS に基づく個人データの管理と、個人に専属するパーソナル AI（PAI）の検討。教育・地域での運用設計、同意の管理、評価の方法を含みます。
+      keywords: [PDS / PAI, Data Governance, Consent, Privacy-by-Design]
+    - title: Graph-Document for Learning & Work
+      body: グラフ文書の協働作成による、思考の可視化と再利用。学習・研修・社内ナレッジでの構造化と、RAG の入出力の品質設計。
+      keywords: [Graph-Document, Collaborative Authoring, Critical Thinking, RAG]
+    - title: Multimodal / Observational Sensing
+      body: 音・映像・行動などの多視点の観察から、状態の理解と評価を行います。現場の運用になじむ軽量な計測を目指しています。
+      keywords: [Multimodal, Engagement, Aging Society, Human Factors]
+  outputs_title: 主な業績
+  outputs:
+    - year: "2025"
+      venue: 人工知能（人工知能学会誌）
+      title: 小規模言語モデルによるパーソナル AI の展望
+    - year: "2024"
+      venue: 玉川大学工学部紀要（査読あり）
+      title: 文章生成 AI を用いた授業デザインの提案・実践
+    - year: "2023"
+      venue: NCSP 2023（口頭発表・同会期セッション座長）
+      title: Collaborative Learning Support Environment Utilizing Graph Documents
+  outputs_note: 論文・発表・受賞などの全件は researchmap にまとめています。
+  outputs_link: researchmap で業績を見る
+  teaching_title: 教育と学会活動（抜粋）
+  teaching:
+    - 玉川大学：卒業研究、実験・演習系の科目ほか
+    - 学会活動：情報処理学会・人工知能学会・ヒューマンインタフェース学会 など
+  lab_note: これらのテーマは、研究室で学生と一緒に進めています。研究の詳しい内容と卒業研究の成果は、研究室のサイトにあります。
+  lab_link: 研究室のサイトを見る
+
+tagline:
+  label: 研究室が目指す社会
+  # 1 行目と 2 行目に分け、文節ごとに並べる（スクロールに合わせて 1 つずつ濃くなる）
+  lines:
+    - [パーソナルデータと, 小さな, AI が、]
+    - [本人の, 手で, 扱える, 社会へ。]
+  link: 研究室のサイトで、この考えを図で見る
+
+practice:
+  label: 2 / 3
+  title: 社会実装
+  lead: 企業・学校・地域と組んで進めた開発と共同研究です。
+  items:
+    - kind: 株式会社HEROIC との共同研究
+      title: 人的資本の可視化に向けた、マルチモーダルセンシングによるエンゲージメント評価
+      href: https://heroic.co.jp/pdf/tamagawa_press.pdf
+      href_label: プレスリリース（PDF）
+      body: 企業の競争力と持続的な成長の源である「人的資本」のエンゲージメントを、生体情報・行動データ・環境データなどから定量的に評価する手法を開発しています。評価結果を人材戦略や投資判断に生かす、新しい枠組みの構築を目指します。
+      tags: [マルチモーダル, エンゲージメント, 人的資本]
+      size: wide
+    - kind: 東京藝術大学 × 萩 × 筑波技術大学 × 玉川大学（2026）
+      title: 「さわるかたち みるかたち」展
+      href: https://www.geidai.ac.jp/news/20260326156923.html
+      href_label: 東京藝術大学のお知らせ
+      body: 地域中核事業 J-PEAKS「視覚・聴覚障がい × AI × アート」の一環として、萩・明倫学舎（山口県）で開かれた展覧会に協力者として参画しました。3D プリントとセンシング技術を使った触れる造形体験で、萩焼の新しい可能性と、多様な人どうしのつながりを探りました。東京藝術大学・株式会社CASA・牧野窯・株式会社アイズ・筑波技術大学との共同実施（2026.3.29〜4.29）。
+      tags: [3D プリント, センシング, アクセシビリティ]
+      size: tall
+    - kind: 玉川学園サンゴ研究部との連携
+      title: サンゴ養殖支援サービスアプリ
+      body: 新入部員や学生がサンゴの飼育・養殖を理解しやすくするための教育支援です。飼育の過程を学べるアニメーション生成 AI、長い文章から作る音声ポッドキャスト、質疑応答を支える対話型 AI を組み合わせました。
+      tags: [生成 AI, ポッドキャスト, 教育支援]
+    - kind: パーソナルデータの分散管理
+      title: 個人最適化型支援サービス
+      body: 個人の情報を安全に記録・管理するアプリを、Flutter/Dart で iOS・Android・macOS に展開しました。同意に基づくデータ活用のガバナンス（アクセス制御、利用履歴の可視化）を備え、パーソナル AI（PAI）への応用を見据えて設計しています。
+      tags: [Flutter, PDS, 同意管理]
+    - kind: 国内共同研究
+      title: 鍼灸院における筋骨格痛患者の症例データベース
+      body: 鍼灸院の症例情報を体系的に集め、臨床研究や教育に使える基盤を設計・実装しました。自然言語処理や症状分類 AI による解析を見据えた構造と、現場での入力のしやすさ・データの標準化を両立させています。
+      tags: [症例データベース, 自然言語処理, 臨床]
+      anchor: crowdfunding
+      anchor_label: クラウドファンディングで実施
+    - kind: ゲームセンター企業との連携
+      title: 店舗のトラブル解決アプリ
+      body: 店舗に掲示した QR コードから LINE で AI にアクセスし、ChatGPT との対話でトラブルを解決します。現場スタッフの負担を減らしながら、利用者の満足度を高める仕組みです。
+      tags: [LINE, ChatGPT, QR コード]
+    - kind: 対話システム
+      title: 企業とユーザの最適マッチングを支援する対話システム
+      body: LINE を窓口に、ChatGPT / Claude と Azure AI Search による RAG を組み合わせました。企業情報とユーザの希望を文脈で検索し、適合度の高い提案を生成します。
+      tags: [RAG, Azure AI Search, LINE]
+    - kind: LINE 公式アカウント
+      title: 「ものわかりの良い上司」
+      body: 学生や利用者が悩みを気軽に相談できる AI ボットです。ChatGPT による対話で、入力された悩みを柔軟に受け止め、共感的に返答します。公開の LINE アカウントとして配信しています。
+      tags: [LINE, ChatGPT, 相談]
+
+music:
+  label: 3 / 3
+  title: 音楽
+  lead: <strong>brightwaltz</strong>（ブライトワルツ）名義で 2010 年から活動するピアニスト・作曲家です。ピアノの即興をもとに、ジャズ・ポップス・クラシックを横断して作曲・演奏しています。
+  stats:
+    - value: "2010"
+      label: 活動を始めた年
+    - value: "65"
+      label: <a href="https://dova-s.jp/creator/detail/81" target="_blank" rel="noopener">DOVA-SYNDROME</a> で公開している曲（累計）
+  areas:
+    - title: XR・現代アート作品との協働
+      body: ナカダリオ監督のイマーシブ作品 <a href="https://www.tactus.jp/nox" target="_blank" rel="noopener">『Nox』</a>（第 83 回ヴェネチア国際映画祭 Venice Immersive Competition 正式選出、2026）で音楽を担当。短編映画 SIGNS OF LIFE™（2024）の音楽も担当しました。
+    - title: メディアアート・プロジェクトへの楽曲提供
+      body: 落合陽一氏の映像作品（筑波大学デジタルネイチャー研究室、個展「<a href="https://www.youtube.com/watch?v=98VGJzv7xlc" target="_blank" rel="noopener">未知への追憶</a>」、<a href="https://www.youtube.com/watch?v=hE2CStcAO8o" target="_blank" rel="noopener">県北芸術祭</a>（楽曲：<a href="https://dova-s.jp/bgm/play2115.html" target="_blank" rel="noopener">Forest of Conifer Trees</a>）など）や、<a href="https://www.youtube.com/watch?v=slKkMmgJ1HY" target="_blank" rel="noopener">大阪・関西万博テーマ事業「いのちの輝きプロジェクト」</a>（落合陽一プロデュース）に楽曲を提供しました。
+    - title: 公共機関・自治体の映像への楽曲提供
+      body: <a href="https://www.youtube.com/watch?v=XeKHCGbArYI" target="_blank" rel="noopener">環境省 佐渡自然保護官事務所</a>のトキ野生復帰の映像（日本語版・英語版）、新潟県公式チャンネル「<a href="https://www.youtube.com/watch?v=h37s0PBu4AE" target="_blank" rel="noopener">佐渡棚田紀行</a>」、<a href="https://www.youtube.com/watch?v=mprRYj43jGg" target="_blank" rel="noopener">大分県立美術館の展覧会映像</a>など、行政と公立文化施設の公式コンテンツで使われています。
+    - title: ゲーム・映像作品への楽曲提供
+      body: ゲーム「<a href="https://dic.pixiv.net/a/%E6%AE%BA%E6%88%AE%E3%81%AE%E5%A4%A9%E4%BD%BF#h2_3" target="_blank" rel="noopener">殺戮の天使</a>」、インディーゲーム「<a href="https://life0.info/dreaminher/index" target="_blank" rel="noopener">Dreamin' Her</a>」に BGM を提供。映画「あかいあかい青りんご」のエンディングテーマ、短編映画「Reポエム」の音楽など、映像とゲームでの商業作品が多数あります。
+    - title: ライブ演奏とサブスク配信
+      body: 銀座の音楽ホール <a href="https://ginzatact.com/detail.php?id=202505_022" target="_blank" rel="noopener">GINZA TACT</a> でのライブ（2025）、立川 燦燦 Illumination 記念コンサート（2021）などに出演。線香花美「<a href="https://www.youtube.com/watch?v=d8Z2rtXotro" target="_blank" rel="noopener">物語はいつか誰かの役に立つ</a>」（作曲）を各種サブスクで配信しています。
+  links:
+    - label: 個人サイトの Music Portfolio
+      href: https://brightwaltz.mystrikingly.com/#portfolio
+    - label: SoundCloud
+      href: https://soundcloud.com/brightwaltz
+
+crowdfunding:
+  label: Coda
+  title: クラウドファンディング
+  lead: 研究と音楽のそれぞれで、支援を集めて実現したプロジェクトです。
+  items:
+    - kind: 国内共同研究
+      title: 電子カルテシステムを活用した鍼灸院における筋骨格痛患者の症例データベース構築
+      href: https://camp-fire.jp/projects/703754/view
+      purpose: 鍼灸院の筋骨格痛患者の症例を電子カルテで多施設から集め、臨床のエビデンスを蓄積・発信できる研究基盤をつくる。
+      stats:
+        - value: ¥1,395,289
+          label: 支援総額
+        - value: 465%
+          label: 達成率（目標 ¥300,000）
+        - value: "240"
+          label: 支援者（名）
+      outcomes:
+        - 約 10 施設で試験的に症例を集められるシステムを整え、電子カルテの運用準備を終えました。
+        - 全日本鍼灸学会などで中間報告・学術発表を行い、現場のフィードバックを受けながら進めています。
+        - 自然言語処理・症状分類 AI・効果予測モデルに使えるよう、症例データを設計しています。
+    - kind: 個人・アート
+      title: 「うつ病、パニック障害、双極性障害の体験を歌にして届けたい！」
+      href: https://camp-fire.jp/projects/610230/view
+      purpose: 精神疾患の当事者としてのリカバリーストーリーを歌にして制作・発信し、メンタルヘルスへの理解と共感を広げる。
+      stats:
+        - value: ¥421,780
+          label: 支援総額
+        - value: 140%
+          label: 達成率（目標 ¥300,000）
+        - value: "79"
+          label: 支援者（名）
+      outcomes:
+        - 作詞・作曲・レコーディング・ミキシングまで楽曲を制作し、先行配信とリターン（楽曲データ、イベント招待、カセットテープなど）を実施しました。
+        - 当事者の体験が「誰かの役に立つ物語」として届くことを目指した、アートと社会表現の取り組みです。
+  site_label: CAMPFIRE のページ
+
+closing:
+  title: 研究室のサイトと researchmap へ
+  body: 研究の詳しい内容と学生の取り組みは研究室のサイトに、論文・発表などの業績の全件は researchmap にまとめています。
+  primary: 研究室のサイトを見る
+  secondary: researchmap で業績を見る
+  contact_title: ご相談
+  contact_body: 研究・教育・社会実装に関するご相談は、個人サイトのお問い合わせから受け付けています。
+  contact_link: 個人サイトのお問い合わせへ
+  more_title: そのほかのページ
+  more:
+    - label: 大学公式の教員ページ
+      href: https://www.tamagawa.ac.jp/college_of_engineering/teachers/detail/209shibata.html
+    - label: 個人サイト（Strikingly）
+      href: https://brightwaltz.mystrikingly.com
+    - label: Wantedly
+      href: https://www.wantedly.com/id/brightwaltz
+    - label: SoundCloud
+      href: https://soundcloud.com/brightwaltz
+
+notfound:
+  title: このページは見つかりませんでした
+  body: URL が変わったか、ページがなくなった可能性があります。
+  back: ポートフォリオのトップへ
