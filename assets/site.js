@@ -1,7 +1,6 @@
 // 柴田健一 ポートフォリオ：動きと操作だけを受け持つ。本文は HTML に書いてあり、ここでは足さない。
 (() => {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const ease = (t) => 1 - Math.pow(1 - t, 4);
 
   // スクロールで現れる節（1 回だけ）
   const reveals = document.querySelectorAll('[data-reveal]');
@@ -136,7 +135,7 @@
     let ticking = false;
     const update = () => {
       ticking = false;
-      const line = window.innerHeight * 0.62;
+      const line = window.innerHeight * 0.75;
       for (const w of words) w.classList.toggle('is-on', w.getBoundingClientRect().top < line);
     };
     const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
@@ -150,32 +149,4 @@
     }
   }
 
-  // クラウドファンディングの数字：現れたときに 0 から数え上げる（HTML には最終の値が書いてある）
-  const counters = document.querySelectorAll('[data-count] .stats__value');
-  if (counters.length && 'IntersectionObserver' in window && !reduce.matches) {
-    const fmt = new Intl.NumberFormat(document.documentElement.lang === 'ja' ? 'ja-JP' : 'en-US');
-    const run = (el) => {
-      const text = el.textContent.trim();
-      const m = text.match(/^(\D*)([\d,]+)(\D*)$/);
-      if (!m) return;
-      const [, pre, num, post] = m;
-      const target = Number(num.replace(/,/g, ''));
-      const start = performance.now();
-      const dur = 1200;
-      const step = (now) => {
-        const k = Math.min(1, (now - start) / dur);
-        el.textContent = `${pre}${fmt.format(Math.round(target * ease(k)))}${post}`;
-        if (k < 1) requestAnimationFrame(step); else el.textContent = text;
-      };
-      requestAnimationFrame(step);
-    };
-    const io = new IntersectionObserver((entries) => {
-      for (const e of entries) {
-        if (!e.isIntersecting) continue;
-        run(e.target);
-        io.unobserve(e.target);
-      }
-    }, { threshold: 0.6 });
-    counters.forEach((el) => io.observe(el));
-  }
 })();

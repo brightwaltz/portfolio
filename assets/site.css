@@ -57,7 +57,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   line-break: strict;
-  overflow-wrap: anywhere;
+  word-break: auto-phrase;
+  overflow-wrap: break-word;
 }
 /* 平らな面に薄いノイズ（4%） */
 body::before {
@@ -351,7 +352,7 @@ p, li, dd { text-wrap: pretty; }
   letter-spacing: 0.04em;
   width: fit-content;
   padding-bottom: 0.08em;
-  background: linear-gradient(90deg, #000000, #666666);
+  background: linear-gradient(90deg, #000000, #666666) 0 0 / 680px 100% no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -418,7 +419,7 @@ p, li, dd { text-wrap: pretty; }
   margin-bottom: var(--s-300);
 }
 .staff__lines { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; }
-.staff__lines i { display: block; height: 1px; background: var(--rule); }
+.staff__lines i { display: block; height: 1px; background: color-mix(in srgb, var(--text) 22%, var(--rule)); }
 .staff__lines i:first-child, .staff__lines i:last-child { background: color-mix(in srgb, var(--text) 30%, var(--rule)); }
 .staff__sig {
   position: absolute;
@@ -496,9 +497,11 @@ p, li, dd { text-wrap: pretty; }
 .beats:not([data-beat]) .beat--strong .beat__no { color: var(--accent); }
 
 @media (min-width: 768px) {
-  .measure { --staff-h: 56px; }
+  .measure { --staff-h: 80px; --sig-w: 72px; }
   .staff { position: absolute; left: 0; right: 0; top: 0; margin: 0; }
-  .staff__sig { font-size: 30px; line-height: 28px; }
+  .staff__sig { font-size: 48px; line-height: 40px; }
+  .staff__note { width: 22px; height: 15px; top: calc(var(--staff-h) / 2 - 7.5px); }
+  .staff__note::after { height: 48px; width: 2px; bottom: 7px; }
   .measure__beats {
     grid-template-columns: 1.25fr 1fr 1fr;
     margin-left: var(--sig-w);
@@ -510,6 +513,7 @@ p, li, dd { text-wrap: pretty; }
     row-gap: var(--s-75);
     padding: calc(var(--staff-h) + var(--s-300)) var(--s-300) var(--s-400);
     height: 100%;
+    align-content: start;
     border-left: 1px solid var(--rule);
   }
   .beat + .beat a { border-top: 0; }
@@ -517,16 +521,15 @@ p, li, dd { text-wrap: pretty; }
   .beat__no { font-size: 48px; line-height: 1; margin-bottom: var(--s-200); }
 }
 
-/* 節の目印：三つの点（いまの拍を塗る）と、終わりの複縦線 */
+/* 節の目印：1 小節の小さな五線。いまの拍に音符、最後の節は終止線 */
 .marker { display: flex; align-items: center; gap: var(--s-100); }
-.marker__dots { display: inline-flex; align-items: center; gap: var(--s-50); }
-.marker__dots i { width: 8px; height: 8px; border-radius: var(--r-full); border: 1.5px solid var(--accent); }
-.marker__dots i.is-on { background: var(--accent); }
-.marker__dots i:first-child { width: 12px; height: 12px; }
-.marker__coda { display: inline-flex; gap: 3px; height: 16px; }
-.marker__coda::before, .marker__coda::after { content: ""; display: block; height: 100%; background: var(--accent); }
-.marker__coda::before { width: 1.5px; }
-.marker__coda::after { width: 4px; }
+.marker__staff { overflow: visible; flex: none; }
+.marker__staff line { stroke: var(--rule); stroke-width: 1; }
+.marker__staff line.bar { stroke: color-mix(in srgb, var(--text) 40%, var(--rule)); }
+.marker__staff line.stem { stroke: var(--accent); stroke-width: 1.5; }
+.marker__staff circle.on { fill: var(--accent); }
+.marker__staff circle.off { fill: color-mix(in srgb, var(--text) 30%, var(--rule)); }
+.marker__staff rect.end { fill: var(--accent); }
 .marker__label {
   font-family: var(--mono);
   font-size: 14px;
@@ -586,20 +589,18 @@ p, li, dd { text-wrap: pretty; }
   .interests li { grid-template-columns: 1fr 1fr; gap: var(--s-300); align-items: baseline; }
 }
 
-.themes { display: grid; gap: var(--s-200); }
+.themes { display: grid; border-top: 1px solid var(--rule); }
 .theme {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: var(--s-200);
+  column-gap: var(--s-300);
   row-gap: var(--s-100);
-  padding: var(--s-300);
-  border-radius: var(--r-2xl);
-  background: var(--surface);
+  padding: var(--s-300) 0;
+  border-bottom: 1px solid var(--rule);
 }
-.theme__no { grid-row: span 3; font-size: 14px; line-height: 28px; color: var(--accent); font-weight: 600; }
-.theme__title { font-size: 20px; line-height: 28px; }
-.theme__body { color: var(--text); }
-.theme .tags li { border-color: rgb(22 22 22 / 0.12); }
+.theme__no { grid-row: span 3; font-size: 30px; line-height: 36px; color: var(--accent); font-weight: 500; }
+.theme__title { font-size: 20px; line-height: 28px; padding-top: var(--s-50); }
+.theme__body { max-inline-size: 40em; }
 
 .outputs { display: grid; border-top: 1px solid var(--rule); }
 .outputs li {
@@ -616,16 +617,12 @@ p, li, dd { text-wrap: pretty; }
 
 .labnote {
   display: grid;
-  gap: var(--s-300);
+  gap: var(--s-200);
   justify-items: start;
-  padding: var(--s-400);
-  border-radius: var(--r-2xl);
-  background: var(--accent);
-  color: var(--on-accent);
+  padding-left: var(--s-300);
+  border-left: 2px solid var(--accent);
 }
 .labnote p { font-size: 18px; line-height: 32px; max-inline-size: 32em; }
-.labnote .btn { background: var(--on-accent); color: var(--accent); }
-.labnote .btn:hover { background: #E6EAF1; }
 
 /* 研究室が目指す社会（一語ずつ濃くなる） */
 .tagline {
@@ -645,7 +642,7 @@ p, li, dd { text-wrap: pretty; }
 .tagline__line { display: block; }
 .tagline__word { display: inline-block; transition: color 700ms var(--ease), transform 700ms var(--ease); }
 .js .tagline__word:not(.is-on) { transform: translateY(8px); }
-.js .tagline__word { color: rgb(22 22 22 / 0.28); }
+.js .tagline__word { color: rgb(22 22 22 / 0.35); }
 .js .tagline__word.is-on { color: var(--text); }
 @media (min-width: 768px) {
   .tagline__text { font-size: 48px; line-height: 64px; }
@@ -679,12 +676,20 @@ p, li, dd { text-wrap: pretty; }
   .work__title { font-size: 24px; line-height: 32px; }
 }
 
+.work--feature .work__title { font-size: 24px; line-height: 32px; }
+.work--feature .work__body p { font-size: 18px; line-height: 32px; }
+@media (min-width: 1024px) {
+  .work--feature { padding: var(--s-700) 0; }
+  .work--feature .work__title { font-size: 30px; line-height: 40px; }
+}
+
 /* 音楽 */
 .section--music { background: var(--surface); }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(9em, 1fr)); gap: var(--s-300); }
+.stats { display: flex; flex-wrap: wrap; gap: var(--s-300) var(--s-500); }
 .stats > div { display: flex; flex-direction: column-reverse; gap: var(--s-50); justify-content: flex-end; }
 .stats dt { font-size: 14px; line-height: 20px; color: var(--muted); }
 .stats__value {
+  white-space: nowrap;
   font-size: 36px;
   line-height: 40px;
   font-weight: 600;
@@ -759,5 +764,8 @@ p, li, dd { text-wrap: pretty; }
   .menu__list li { transform: none; }
 }
 
-/* 英語ページの欧文の名前は字間を詰める */
+/* 英語ページの欧文の名前は字間を詰め、1 行に収める */
 .hero__name-main:lang(en) { letter-spacing: -0.02em; }
+@media (min-width: 768px) {
+  .hero__name-main:lang(en) { font-size: 72px; }
+}

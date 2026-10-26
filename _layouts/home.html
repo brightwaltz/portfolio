@@ -202,7 +202,7 @@
 
           <aside class="labnote" data-reveal>
             <p>{{ d.research.lab_note }}</p>
-            <a class="btn" href="{{ site.links.lab }}">{{ d.research.lab_link }}{{ next }}</a>
+            <a class="link" href="{{ site.links.lab }}">{{ d.research.lab_link }}{{ ext }}</a>
           </aside>
         </div>
       </div>
@@ -229,7 +229,7 @@
         </header>
         <ol class="works">
           {%- for w in d.practice.items %}
-          <li class="work" data-reveal>
+          <li class="work{% if w.size %} work--feature{% endif %}" data-reveal>
             <span class="work__no mono" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
             <div class="work__head">
               <p class="work__kind">{{ w.kind }}</p>
@@ -293,7 +293,7 @@
           <article class="fund" data-reveal>
             <p class="work__kind">{{ c.kind }}</p>
             <h3 class="fund__title">{{ c.title }}</h3>
-            <dl class="stats" data-count>
+            <dl class="stats">
               {%- for s in c.stats %}
               <div><dt>{{ s.label }}</dt><dd class="stats__value">{{ s.value }}</dd></div>
               {%- endfor %}

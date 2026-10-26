@@ -1,9 +1,16 @@
-{%- comment -%} 節の目印。include.beat が 1〜3 なら三つの点のうち該当を塗る。coda なら複縦線。 {%- endcomment -%}
+{%- comment -%} 節の目印：1 小節の小さな五線。include.beat（1〜3）の拍に音符を置く。coda なら終止線。 {%- endcomment -%}
 <p class="marker">
-  {%- if include.beat == 'coda' %}
-  <span class="marker__coda" aria-hidden="true"></span>
-  {%- else %}
-  <span class="marker__dots" aria-hidden="true">{% for i in (1..3) %}<i{% if forloop.index == include.beat %} class="is-on"{% endif %}></i>{% endfor %}</span>
-  {%- endif %}
+  <svg class="marker__staff" viewBox="0 0 76 24" width="76" height="24" aria-hidden="true" focusable="false">
+    {%- for y in (0..4) %}<line x1="0" x2="76" y1="{{ y | times: 5 | plus: 2 }}" y2="{{ y | times: 5 | plus: 2 }}" />{% endfor %}
+    <line class="bar" x1="0.5" x2="0.5" y1="2" y2="22" />
+    {%- if include.beat == 'coda' %}
+    <line class="bar" x1="70" x2="70" y1="2" y2="22" /><rect class="end" x="72" y="2" width="4" height="20" />
+    {%- else %}
+    <line class="bar" x1="75.5" x2="75.5" y1="2" y2="22" />
+    {%- assign cx = include.beat | minus: 1 | times: 24 | plus: 14 %}
+    {%- for i in (1..3) %}{% assign bx = i | minus: 1 | times: 24 | plus: 14 %}<circle class="{% if i == include.beat %}on{% else %}off{% endif %}" cx="{{ bx }}" cy="12" r="{% if i == include.beat %}4{% else %}2{% endif %}" />{% endfor %}
+    <line class="stem" x1="{{ cx | plus: 3.6 }}" x2="{{ cx | plus: 3.6 }}" y1="11" y2="-2" />
+    {%- endif %}
+  </svg>
   <span class="marker__label"{% if include.lang %} lang="{{ include.lang }}"{% endif %}>{{ include.label }}</span>
 </p>
