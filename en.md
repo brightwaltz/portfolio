@@ -151,16 +151,16 @@ Active since 2010 as a pianist and composer under the name **brightwaltz**. Comp
 ### Main Areas of Activity
 
 **Music for Media Art Projects**
-Provided music for video works by Yoichi Ochiai (University of Tsukuba Digital Nature Lab; solo exhibition "<a href="https://www.youtube.com/watch?v=98VGJzv7xlc" target="_blank">Memories of the Unknown</a>"; <a href="https://www.youtube.com/watch?v=hE2CStcAO8o" target="_blank">Kenpoku Art Festival</a>, track: <a href="https://dova-s.jp/bgm/play2115.html" target="_blank">Forest of Conifer Trees</a>) and the <a href="https://www.youtube.com/watch?v=slKkMmgJ1HY" target="_blank">Osaka-Kansai Expo theme project "Brilliance of Life Project"</a> (produced by Yoichi Ochiai).
+Provided music for video works by Yoichi Ochiai (University of Tsukuba Digital Nature Lab; solo exhibition "<a href="https://www.youtube.com/watch?v=98VGJzv7xlc" target="_blank">Memories of the Unknown</a>"; <a href="https://www.youtube.com/watch?v=hE2CStcAO8o" target="_blank">Kenpoku Art Festival</a>, track: <a href="https://dova-s.jp/bgm/play2115.html" target="_blank">Forest of Conifer Trees</a>).
 
 **Music for Public Institutions and Local Government Content**
 Adopted in official content of public institutions and cultural facilities, including videos for the <a href="https://www.youtube.com/watch?v=XeKHCGbArYI" target="_blank">Ministry of the Environment / Sado Nature Conservation Office</a> on the reintroduction of the crested ibis (both Japanese and English versions), the official Niigata Prefecture channel "<a href="https://www.youtube.com/watch?v=h37s0PBu4AE" target="_blank">Sado Terraced Rice Field Journey</a>," and the <a href="https://www.youtube.com/watch?v=mprRYj43jGg" target="_blank">Oita Prefectural Art Museum exhibition videos</a>.
 
 **Music for Games and Film Works**
-BGM contributions to popular game titles such as "<a href="https://dic.pixiv.net/a/%E6%AE%BA%E6%88%AE%E3%81%AE%E5%A4%A9%E4%BD%BF#h2_3" target="_blank">Angels of Death</a>" and the indie game "<a href="https://life0.info/dreaminher/index" target="_blank">Dreamin' Her</a>." ED theme for the film "<a href="http://www.fidff.com/com/2016-130.html" target="_blank">Akai Akai Aoringo</a>," music for the short film "Re: Poem," and many other commercial credits in film and games.
+BGM contributions to popular game titles such as "<a href="https://dic.pixiv.net/a/%E6%AE%BA%E6%88%AE%E3%81%AE%E5%A4%A9%E4%BD%BF#h2_3" target="_blank">Angels of Death</a>" and the indie game "<a href="https://life0.info/dreaminher/index" target="_blank">Dreamin' Her</a>." ED theme for the film "Akai Akai Aoringo," music for the short film "Re: Poem," and many other commercial credits in film and games.
 
 **Collaboration on XR / Contemporary Art Works**
-Music credits in cutting-edge expressive fields, including <a href="https://www.tactus.jp/nox" target="_blank">Rio Nakada "NOX"</a> (XR work, 2025) and the short film <a href="https://signsoflife.tokyo/news/article/1002/" target="_blank">SIGNS OF LIFE™</a> (2024).
+Music credits in cutting-edge expressive fields, including Rio Nakada’s immersive work <a href="https://www.tactus.jp/nox" target="_blank">"Nox"</a> (official selection, Venice Immersive Competition, 83rd Venice International Film Festival, 2026) and the short film SIGNS OF LIFE™ (2024).
 
 **Live Performances and Subscription Streaming**
 Live appearances at the Ginza music hall <a href="https://ginzatact.com/detail.php?id=202505_022" target="_blank">GINZA TACT</a> (2025), Tachikawa Sansan Illumination Commemorative Concert (2021), and others. "Senkohanami—<a href="https://www.youtube.com/watch?v=d8Z2rtXotro" target="_blank">Stories Will One Day Help Someone</a>" (composed by) is available on various subscription services.

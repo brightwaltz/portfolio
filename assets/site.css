@@ -162,3 +162,8 @@ em { font-style: normal; }
   html { scroll-behavior: auto; }
   .skip, .btn, .bar__nav a, .bar__lang { transition: none; }
 }
+
+/* 404 */
+.notfound { min-height: 80vh; display: grid; align-content: center; }
+.notfound h1 { font-size: 30px; line-height: 36px; margin: 0 0 16px; }
+.notfound__links { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 8px; }
