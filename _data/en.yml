@@ -128,7 +128,7 @@ practice:
   lead: Development projects and joint studies carried out with companies, schools and local communities.
   items:
     - kind: Joint research with HEROIC Inc.
-      title: Engagement evaluation using multimodal sensing, toward visualizing human capital
+      title: Research on Engagement Evaluation Using Multimodal Sensing Information for Visualizing Human Capital
       href: https://heroic.co.jp/pdf/tamagawa_press.pdf
       href_label: Press release (PDF, Japanese)
       body: Developing methods to quantitatively evaluate the engagement of human capital, the source of corporate competitiveness and sustainable growth, from biometric, behavioral and environmental data. The goal is a new framework that feeds the results into HR strategy and investment decisions.
@@ -142,29 +142,29 @@ practice:
       tags: [3D printing, Sensing, Accessibility]
       feature: true
     - kind: With the Tamagawa Academy Coral Research Club
-      title: Coral aquaculture support app
+      title: Development of a Coral Aquaculture Support App
       body: Educational support that helps new members and students understand coral breeding and aquaculture. It combines animation generation AI for the breeding process, audio podcasts generated from long texts, and conversational AI for Q&A.
       tags: [Generative AI, Podcast, Education]
-    - kind: Distributed personal data management
-      title: Personalized support service
+    - kind: App development (iOS, Android, macOS)
+      title: Personalized Support Service Based on Distributed Personal Data Management
       body: An app that securely records and manages personal information, built with Flutter/Dart for iOS, Android and macOS. It includes consent-based data governance (access control and a visible usage history) and is designed with future use as a Personal AI (PAI) in mind.
       tags: [Flutter, PDS, Consent management]
     - kind: Domestic joint research
-      title: Case database of musculoskeletal pain patients in acupuncture clinics
+      title: Building a Case Database of Musculoskeletal Pain Patients in Acupuncture Clinics Using Electronic Systems
       body: Designed and implemented a foundation that systematically collects case information from acupuncture clinics for clinical research and education. The structure anticipates analysis with natural language processing and symptom classification AI, while keeping data entry quick and standardized in the clinic.
       tags: [Case database, NLP, Clinical]
       anchor: crowdfunding
       anchor_label: Funded through crowdfunding
-    - kind: With a game center company
-      title: In-store troubleshooting app
+    - kind: Company partnership
+      title: Game Center Company Partnership App
       body: Patrons scan a QR code posted in the store, reach an AI through LINE, and solve problems in a ChatGPT dialogue. It reduces the load on staff while improving customer satisfaction.
       tags: [LINE, ChatGPT, QR code]
     - kind: Dialogue system
-      title: Dialogue system that matches companies and users
+      title: Dialogue System Supporting Optimal Matching Between Companies and Users
       body: A LINE front end combined with ChatGPT / Claude and RAG on Azure AI Search. It searches company information and user preferences in context and generates well-matched recommendations.
       tags: [RAG, Azure AI Search, LINE]
     - kind: LINE official account
-      title: “Mono-wakari no Yoi Joushi” (The understanding boss)
+      title: “Mono-wakari no Yoi Joushi” (The Understanding Boss)
       body: An AI chatbot where students and other users can talk about their worries. Its ChatGPT dialogue takes in what people write and answers with empathy. Distributed as a public LINE account.
       tags: [LINE, ChatGPT, Counseling]
 

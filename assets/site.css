@@ -691,7 +691,7 @@ p, li, dd { text-wrap: pretty; }
 .works--compact { border-top: 0; }
 @media (min-width: 1024px) {
   .works--compact { grid-template-columns: 1fr 1fr; column-gap: var(--s-700); }
-  .works--compact .work { grid-template-columns: 1fr; gap: var(--s-200); padding: var(--s-400) 0; }
+  .works--compact .work { grid-template-columns: 1fr; gap: var(--s-200); padding: var(--s-400) 0; align-content: start; }
   .works--compact .work__title { font-size: 20px; line-height: 28px; }
 }
 .works--compact .work__body p { font-size: 14px; line-height: 24px; }
