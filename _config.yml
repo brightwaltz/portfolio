@@ -1,0 +1,10 @@
+title: Kenichi Shibata
+url: https://brightwaltz.github.io
+baseurl: /portfolio
+markdown: kramdown
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .claude

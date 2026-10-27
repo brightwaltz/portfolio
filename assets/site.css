@@ -1,0 +1,169 @@
+/* 柴田健一 ポートフォリオ
+   旧版の構成と文言はそのまま。書体・文字の大きさ・余白・色だけを整える。 */
+
+:root {
+  --bg: #FAFAF8;
+  --rule: #E2E1DC;
+  --text: #1A1A1A;
+  --muted: #5C5C57;
+  --accent: #0B2C5C;
+  --accent-hover: #133B73;
+  --font: "Geist", "Noto Sans JP", sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --measure: 720px;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  line-break: strict;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; }
+:lang(en) { letter-spacing: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.skip {
+  position: fixed; left: 16px; top: 16px; z-index: 50;
+  padding: 8px 12px; border-radius: 8px;
+  background: var(--accent); color: #fff; font-size: 14px; line-height: 20px; text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 300ms var(--ease);
+}
+.skip:focus { transform: none; }
+
+/* ── 上の帯 ─────────────────────────────── */
+.bar {
+  position: sticky; top: 0; z-index: 20;
+  background: rgb(250 250 248 / 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+}
+.bar__in {
+  max-width: calc(var(--measure) + 48px);
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex; align-items: center; gap: 24px;
+}
+.bar__name { color: var(--text); font-weight: 700; font-size: 14px; line-height: 20px; text-decoration: none; white-space: nowrap; }
+.bar__nav { display: flex; gap: 16px; margin-left: auto; }
+.bar__nav a, .bar__lang, .bar__toc summary {
+  font-size: 14px; line-height: 20px; color: var(--muted); text-decoration: none; white-space: nowrap;
+  transition: color 300ms var(--ease);
+}
+.bar__nav a:hover, .bar__lang:hover, .bar__toc summary:hover { color: var(--text); }
+.bar__lang { padding-left: 16px; border-left: 1px solid var(--rule); }
+.bar__toc { display: none; position: relative; margin-left: auto; }
+.bar__toc summary { cursor: pointer; list-style: none; padding: 4px 0; }
+.bar__toc summary::-webkit-details-marker { display: none; }
+.bar__toc summary::after { content: "▾"; margin-left: 4px; }
+.bar__toc[open] summary::after { content: "▴"; }
+.bar__toc nav {
+  position: absolute; right: 0; top: calc(100% + 8px);
+  display: grid; min-width: 200px; padding: 8px;
+  background: #fff; border: 1px solid var(--rule); border-radius: 12px;
+  box-shadow: 0 8px 24px rgb(40 38 30 / 0.08);
+}
+.bar__toc nav a { padding: 8px 12px; border-radius: 8px; font-size: 16px; line-height: 24px; color: var(--text); text-decoration: none; }
+.bar__toc nav a:hover { background: #F0F0EC; }
+@media (max-width: 860px) {
+  .bar__nav { display: none; }
+  .bar__toc { display: block; }
+}
+
+/* ── 本文 ───────────────────────────────── */
+.page { max-width: calc(var(--measure) + 48px); margin: 0 auto; padding: 48px 24px 96px; }
+
+/* 冒頭：名前・所属・写真・案内 */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  grid-template-areas: "name photo" "affil photo" "links photo";
+  grid-template-rows: auto auto 1fr;
+  column-gap: 40px;
+  align-items: start;
+  padding-bottom: 8px;
+}
+.intro__photo { grid-area: photo; }
+.intro__photo img {
+  display: block;
+  width: 180px; height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.intro__name {
+  grid-area: name;
+  margin: 8px 0 12px;
+  font-size: 36px; line-height: 44px; font-weight: 700;
+  letter-spacing: 0.02em;
+  font-feature-settings: "palt";
+  border: 0; padding: 0;
+}
+.intro__affil { grid-area: affil; margin: 0; color: var(--muted); font-size: 14px; line-height: 24px; word-break: auto-phrase; text-wrap: balance; }
+.intro__links { grid-area: links; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 24px 0 0; }
+@media (max-width: 600px) {
+  .intro { grid-template-columns: 1fr; grid-template-areas: "photo" "name" "affil" "links"; grid-template-rows: none; }
+  .intro__photo img { width: 120px; height: 120px; margin-bottom: 8px; }
+  .intro__name { font-size: 30px; line-height: 36px; }
+}
+
+.btn {
+  display: inline-flex; align-items: center;
+  padding: 8px 16px; border-radius: 9999px;
+  background: var(--accent); color: #fff;
+  font-size: 14px; line-height: 20px; font-weight: 700; letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background-color 300ms var(--ease);
+}
+.btn:hover { background: var(--accent-hover); }
+.btn:active { transform: translateY(1px); }
+
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent-hover); }
+.textlink { font-size: 14px; line-height: 20px; font-weight: 500; }
+
+/* 見出し */
+h1, h2, h3 { font-feature-settings: "palt"; text-wrap: balance; word-break: auto-phrase; letter-spacing: 0.02em; }
+h2 {
+  margin: 56px 0 16px;
+  font-size: 24px; line-height: 32px; font-weight: 700;
+}
+h3 { margin: 32px 0 8px; font-size: 18px; line-height: 28px; font-weight: 700; }
+h3 a { text-decoration: none; }
+h3 a:hover { text-decoration: underline; }
+p { margin: 0 0 16px; text-wrap: pretty; }
+ul, ol { margin: 0 0 16px; padding-left: 1.4em; }
+li { margin: 4px 0; text-wrap: pretty; }
+li > ul { margin: 4px 0 0; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 40px 0; }
+hr + h2, hr + h3 { margin-top: 0; }
+strong { font-weight: 700; }
+em { font-style: normal; }
+
+.foot {
+  max-width: calc(var(--measure) + 48px); margin: 0 auto; padding: 24px 24px 48px;
+  display: flex; flex-wrap: wrap; gap: 8px 24px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted); font-size: 14px; line-height: 20px;
+}
+.foot p { margin: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .skip, .btn, .bar__nav a, .bar__lang { transition: none; }
+}
+
+/* 404 */
+.notfound { min-height: 80vh; display: grid; align-content: center; }
+.notfound h1 { font-size: 30px; line-height: 36px; margin: 0 0 16px; }
+.notfound__links { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 8px; }

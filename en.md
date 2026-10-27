@@ -2,22 +2,24 @@
 title: Kenichi Shibata | Research Portfolio (English)
 description: Personal Data & AI, Graph-Document, Learning Support, Multimodal Sensing.
 layout: default
+lang: en
 ---
 
-<div style="text-align:right; margin-bottom:0.5em;">
-🌐 <a href="index.html">日本語</a> / <strong>English</strong>
-</div>
-
-<img src="images/kenichi_shibata.jpg" alt="Kenichi Shibata" width="220" style="border-radius:50%; float:right; margin:0 0 1em 1.5em; object-fit:cover; aspect-ratio:1/1;">
+<div class="intro" markdown="1">
+<div class="intro__photo"><img src="images/kenichi_shibata.jpg" alt="Kenichi Shibata" width="887" height="887"></div>
 
 # Kenichi Shibata
-Lecturer, Department of Software Science, College of Engineering, Tamagawa University / Visiting Researcher, RIKEN AIP
+{: .intro__name}
 
-<div style="clear:both;"></div>
+Lecturer, Department of Software Science, College of Engineering, Tamagawa University / Visiting Researcher, RIKEN AIP
+{: .intro__affil}
+
+<p class="intro__links"><a class="btn" href="https://brightwaltz.github.io/shibakenlab/">Lab website</a> <a class="textlink" href="https://researchmap.jp/brightwaltz" target="_blank" rel="noopener">researchmap</a></p>
+</div>
 
 ---
 
-## Research Interests
+## Research Interests {#research}
 - **Personal Data & Personal AI** (Distributed PDS, Consent and Governance, Personal Optimization)
 - **Graph-Document** (Knowledge Structuring, Collaborative Authoring, RAG I/O Design)
 - **Learning Support** (University Education, Adult Re-learning, Assessment Design)
@@ -33,9 +35,7 @@ Lecturer, Department of Software Science, College of Engineering, Tamagawa Unive
 
 ---
 
-<h2 style="color:#2c3e50; background:#f0f0f0; padding:0.5em; border-radius:8px;">
-AI Research & Development
-</h2>
+## AI Research & Development {#rd}
 
 ### [Joint Research with HEROIC Inc.](https://heroic.co.jp/pdf/tamagawa_press.pdf)
 **Research on Engagement Evaluation Using Multimodal Sensing Information for Visualizing Human Capital**
@@ -103,7 +103,7 @@ As part of the J-PEAKS regional core project "Visual/Hearing Impairment × AI ×
 
 ---
 
-## Research Themes
+## Research Themes {#themes}
 
 ### 1) Personal Data & Personal AI
 Personal data management based on distributed PDS, and exploration of Personal AI (PAI) dedicated to individuals. Includes operational design, consent management, and evaluation methods in educational and regional contexts.
@@ -126,7 +126,7 @@ Personal data management based on distributed PDS, and exploration of Personal A
 
 ---
 
-## Selected Outputs
+## Selected Outputs {#outputs}
 - **JSAI Journal 2025**
   Prospects for Personal AI Using Small Language Models (Journal of the Japanese Society for Artificial Intelligence)
 - **Course Design Using Generative AI in University Lectures (Peer-Reviewed) 2024**
@@ -144,23 +144,23 @@ Personal data management based on distributed PDS, and exploration of Personal A
 
 ---
 
-## Music Activities
+## Music Activities {#music}
 
 Active since 2010 as a pianist and composer under the name **brightwaltz**. Composes and performs in a style that crosses jazz, pop, and classical, grounded in piano improvisation. Has published a cumulative 65 tracks on the royalty-free BGM site <a href="https://dova-s.jp/creator/detail/81" target="_blank">DOVA-SYNDROME</a>, widely used in video, games, and events.
 
 ### Main Areas of Activity
 
 **Music for Media Art Projects**
-Provided music for video works by Yoichi Ochiai (University of Tsukuba Digital Nature Lab; solo exhibition "<a href="https://www.youtube.com/watch?v=98VGJzv7xlc" target="_blank">Memories of the Unknown</a>"; <a href="https://www.youtube.com/watch?v=hE2CStcAO8o" target="_blank">Kenpoku Art Festival</a>, track: <a href="https://dova-s.jp/bgm/play2115.html" target="_blank">Forest of Conifer Trees</a>) and the <a href="https://www.youtube.com/watch?v=slKkMmgJ1HY" target="_blank">Osaka-Kansai Expo theme project "Brilliance of Life Project"</a> (produced by Yoichi Ochiai).
+Provided music for video works by Yoichi Ochiai (University of Tsukuba Digital Nature Lab; solo exhibition "<a href="https://www.youtube.com/watch?v=98VGJzv7xlc" target="_blank">Memories of the Unknown</a>"; <a href="https://www.youtube.com/watch?v=hE2CStcAO8o" target="_blank">Kenpoku Art Festival</a>, track: <a href="https://dova-s.jp/bgm/play2115.html" target="_blank">Forest of Conifer Trees</a>).
 
 **Music for Public Institutions and Local Government Content**
 Adopted in official content of public institutions and cultural facilities, including videos for the <a href="https://www.youtube.com/watch?v=XeKHCGbArYI" target="_blank">Ministry of the Environment / Sado Nature Conservation Office</a> on the reintroduction of the crested ibis (both Japanese and English versions), the official Niigata Prefecture channel "<a href="https://www.youtube.com/watch?v=h37s0PBu4AE" target="_blank">Sado Terraced Rice Field Journey</a>," and the <a href="https://www.youtube.com/watch?v=mprRYj43jGg" target="_blank">Oita Prefectural Art Museum exhibition videos</a>.
 
 **Music for Games and Film Works**
-BGM contributions to popular game titles such as "<a href="https://dic.pixiv.net/a/%E6%AE%BA%E6%88%AE%E3%81%AE%E5%A4%A9%E4%BD%BF#h2_3" target="_blank">Angels of Death</a>" and the indie game "<a href="https://life0.info/dreaminher/index" target="_blank">Dreamin' Her</a>." ED theme for the film "<a href="http://www.fidff.com/com/2016-130.html" target="_blank">Akai Akai Aoringo</a>," music for the short film "Re: Poem," and many other commercial credits in film and games.
+BGM contributions to popular game titles such as "<a href="https://dic.pixiv.net/a/%E6%AE%BA%E6%88%AE%E3%81%AE%E5%A4%A9%E4%BD%BF#h2_3" target="_blank">Angels of Death</a>" and the indie game "<a href="https://life0.info/dreaminher/index" target="_blank">Dreamin' Her</a>." ED theme for the film "Akai Akai Aoringo," music for the short film "Re: Poem," and many other commercial credits in film and games.
 
 **Collaboration on XR / Contemporary Art Works**
-Music credits in cutting-edge expressive fields, including <a href="https://www.tactus.jp/nox" target="_blank">Rio Nakada "NOX"</a> (XR work, 2025) and the short film <a href="https://signsoflife.tokyo/news/article/1002/" target="_blank">SIGNS OF LIFE™</a> (2024).
+Music credits in cutting-edge expressive fields, including Rio Nakada’s immersive work <a href="https://www.tactus.jp/nox" target="_blank">"Nox"</a> (official selection, Venice Immersive Competition, 83rd Venice International Film Festival, 2026) and the short film SIGNS OF LIFE™ (2024).
 
 **Live Performances and Subscription Streaming**
 Live appearances at the Ginza music hall <a href="https://ginzatact.com/detail.php?id=202505_022" target="_blank">GINZA TACT</a> (2025), Tachikawa Sansan Illumination Commemorative Concert (2021), and others. "Senkohanami—<a href="https://www.youtube.com/watch?v=d8Z2rtXotro" target="_blank">Stories Will One Day Help Someone</a>" (composed by) is available on various subscription services.
@@ -169,7 +169,7 @@ See <a href="https://brightwaltz.mystrikingly.com/#portfolio" target="_blank">pe
 
 ---
 
-## Crowdfunding
+## Crowdfunding {#crowdfunding}
 
 ### <a href="https://camp-fire.jp/projects/703754/view" target="_blank">Building a Case Database of Musculoskeletal Pain Patients in Acupuncture Clinics Using Electronic Medical Records</a> (Domestic Joint Research, Implemented via Crowdfunding)
 - **Purpose**: Collect cases of musculoskeletal pain patients across multiple acupuncture clinics via electronic medical records, building a research foundation that accumulates and disseminates clinical evidence.
@@ -201,5 +201,5 @@ See <a href="https://brightwaltz.mystrikingly.com/#portfolio" target="_blank">pe
 
 ---
 
-## Contact
+## Contact {#contact}
 For inquiries about research, education, and social implementation, please contact me via the <a href="https://brightwaltz.mystrikingly.com/#contact" target="_blank">personal site</a>.
